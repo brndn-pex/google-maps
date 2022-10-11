@@ -76,6 +76,17 @@ html,
         margin-top: -1em;
       }
 
+      .search-logo{
+        width: 100px;
+        height: auto;
+      }
+
+      #search-branding-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
       #locations-panel-list .search-input {
         width: 100%;
         margin-top: 0.8em;
