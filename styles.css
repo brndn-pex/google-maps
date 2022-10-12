@@ -158,8 +158,8 @@ html,
       }
 
       #locations-panel-list .location-result h2.name {
-        font-size: 1em;
-        font-weight: 500;
+        font-size: 1.2rem;
+        font-weight: 800;
         margin: 0;
       }
 
@@ -203,9 +203,9 @@ html,
       }
 
       #locations-panel-list .option {
-        border: 1px solid #bdc1c6;
+        border: 1px solid #2370ce;
         border-radius: 0.9em;
-        color: #1967d2;
+        color: #000000;
         font-size: 0.9em;
         font-weight: 500;
         padding: 0.3em 0;
