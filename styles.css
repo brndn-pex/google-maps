@@ -9,7 +9,7 @@ html,
         width: 100%;
         height: 100%;
         position: relative;
-        font-family: "Roboto", sans-serif;
+        font-family: "Plus Jakata Sans", sans-serif;
         box-sizing: border-box;
       }
 
@@ -30,7 +30,7 @@ html,
 
       #gmp-map {
         position: absolute;
-        left: 22em;
+        left: 25em;
         top: 0;
         right: 0;
         bottom: 0;
@@ -39,7 +39,7 @@ html,
       #locations-panel {
         position: absolute;
         left: 0;
-        width: 22em;
+        width: 25em;
         top: 0;
         bottom: 0;
         overflow-y: auto;
@@ -149,7 +149,7 @@ html,
       }
 
       #locations-panel-list .location-result.selected {
-        outline: 2px solid #4285f4;
+        outline: 2px solid #1E90FF;
       }
 
       #locations-panel-list button.select-location {
@@ -199,16 +199,18 @@ html,
 
       #locations-panel-list .option-container button:hover,
       #locations-panel-list .option-container a:hover {
-        background-color: #f1f3f4;
+        background-color: #ffffff;
+        color: #1E90FF;
       }
 
       #locations-panel-list .option {
-        border: 1px solid #2370ce;
-        border-radius: 0.9em;
-        color: #000000;
-        font-size: 0.9em;
-        font-weight: 500;
+        border: 1px solid #1E90FF;
+        border-radius: 0.2rem;
+        color: #ffffff;
+        font-size: 0.7rem;
+        font-weight: 300;
         padding: 0.3em 0;
+        background-color: #1E90FF;
       }
 
       #locations-panel-list .option > span {
@@ -227,6 +229,7 @@ html,
         box-sizing: border-box;
         display: none;
       }
+
 
       #locations-panel-details .back-button {
         font-size: 1em;
@@ -247,11 +250,12 @@ html,
         vertical-align: bottom;
 
         /* Match link color #1967d2 */
-        filter: invert(30%) sepia(67%) saturate(7379%) hue-rotate(209deg) brightness(95%) contrast(80%);
+        fill: black;
       }
 
       #locations-panel-details > header {
         text-align: center;
+        /* width: 100px; */
       }
 
       #locations-panel-details .banner {
@@ -259,8 +263,8 @@ html,
       }
 
       #locations-panel-details h2 {
-        font-size: 1.1em;
-        font-weight: 500;
+        font-size: 1.5;
+        font-weight: bold;
         margin-bottom: 0.3em;
       }
 
@@ -273,12 +277,26 @@ html,
         text-align: center;
         font-size: 0.9em;
         margin-top: 1.3em;
+        border-radius: 0.5em;
+        border-color: black;
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+        border: 1px solid;
       }
 
+      #locations-panel-details .address .start-time-bold {
+        font-weight: bold;
+      }
+
+      .groupsLogo {
+        width: 100px;
+        height: auto;
+      }
       #locations-panel-details .atmosphere {
         text-align: center;
         font-size: 0.9em;
-        margin: 0.8em 0;
+        margin: 2em 0;
       }
 
       #locations-panel-details .star-rating-numeric {
