@@ -3,15 +3,19 @@
 const CONFIGURATION = {
   locations: [
     {
-      title: "3 Spode Pl",
+      title: "Home",
       address1: "3 Spode Pl",
       address2: "Umgeni Park, Durban North, 4051, South Africa",
+      startTime: "18h00",
+      endTime: "20h00",
+      url: "https://ucarecdn.com/e53472ef-dc06-41c5-aedc-154710328ac9/PExLogo1.png",
+      day: "Monday",
       coords: { lat: -29.80727668625581, lng: 31.01880276123809 },
       placeId: "ChIJQU55ixoH9x4RxINAdsj16LM",
     },
 
     {
-      title: "125 Adelaide Tambo Dr",
+      title: "Anthem House",
       address1: "125 Adelaide Tambo Dr",
       address2: "Durban North, 4051, South Africa",
       coords: { lat: -29.775788184924796, lng: 31.04373165340767 },
