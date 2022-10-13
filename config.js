@@ -42,7 +42,7 @@ const CONFIGURATION = {
     zoom: 4,
     zoomControl: true,
     maxZoom: 17,
-    mapId: "",
+    mapId: "b9f5280014bac665",
   },
   mapsApiKey: "AIzaSyBULz8OaS5-O6b8R8HjCtZkePq0z9UAMHk",
   capabilities: {
