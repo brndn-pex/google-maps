@@ -389,4 +389,13 @@ html,
         font-style: italic;
       }
 
+      .send-email-btn {
+        border: 1px solid #2370ce;
+        border-radius: 0.9em;
+        color: #000000;
+        font-size: 0.9em;
+        font-weight: 500;
+        padding: 0.3em 0.81em;
+      }
+
     
