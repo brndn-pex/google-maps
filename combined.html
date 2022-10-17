@@ -371,6 +371,15 @@
         font-size: 0.8em;
         font-style: italic;
       }
+
+      .send-email-btn {
+        border: 1px solid #2370ce;
+        border-radius: 0.9em;
+        color: #000000;
+        font-size: 0.9em;
+        font-weight: 500;
+        padding: 0.3em 0.81em;
+      }
     </style>
     <script defer>
         'use strict';
@@ -920,7 +929,7 @@
           <div class="options">
             <div class="option-container">
               <button class="details-button option">
-                <span>View details</span>
+                <span>More Info</span>
               </button>
             </div>
           </div>
@@ -981,6 +990,7 @@
           <a href="{{place.url}}" target="_blank">{{place.user_ratings_total}} reviews</a>
         {{else}}
           <a href="{{place.url}}" target="_blank">See on Google Maps</a>
+          <a href="" class="send-email-btn">Email</a>
         {{/if}}
         {{#if place.price_level}}
           &bull;
@@ -1037,7 +1047,7 @@
             <div id="search-branding-container">
               <img class="search-logo" src="https://ucarecdn.com/e53472ef-dc06-41c5-aedc-154710328ac9/PExLogo1.png"/>
               <h1 class="search-branding">
-              Project Exodus Group Search</h1>
+              Find a Recovery Group Near You</h1>
             </div>
             <div class="search-input">
               <input id="location-search-input" placeholder="Enter your address or zip code">

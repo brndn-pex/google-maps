@@ -203,7 +203,7 @@ html,
         color: #1E90FF;
       }
 
-      #locations-panel-list .option {
+      #locations-panel-list .option, .send-email-btn {
         border: 1px solid #1E90FF;
         border-radius: 0.2rem;
         color: #ffffff;
@@ -211,7 +211,7 @@ html,
         font-weight: 300;
         padding: 0.3em 0;
         background-color: #1E90FF;
-      }
+      }  
 
       #locations-panel-list .option > span {
         margin: 0 0.9em;
@@ -364,3 +364,5 @@ html,
         font-size: 0.8em;
         font-style: italic;
       }
+
+    
