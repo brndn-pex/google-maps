@@ -36,7 +36,7 @@
           <div class="options">
             <div class="option-container">
               <button class="details-button option">
-                <span>VIEW GROUP</span>
+                <span>MORE INFO</span>
               </button>
             </div>
           </div>
@@ -69,7 +69,7 @@
         <div class="distance">{{location.travelDistanceText}} away</div>
       {{/if}}
       <div class="address">
-        {{location.address1}}<br>
+        <b>{{location.address1}}</b><br>
         {{location.address2}}
       </div>
       <br>
@@ -78,6 +78,11 @@
         <span class="start-time-bold">Start Time:</span><br> {{location.startTime}}
       </div>
       <div class="address"><span class="start-time-bold">End Time:</span><br> {{location.endTime}}</div>
+      
+      <div class="email">
+        <a href="" class="email-btn">Email</a>
+      </div>
+
       <div class="atmosphere">
         {{#if place.rating}}
           <span class="star-rating-numeric">{{place.rating}}</span>
@@ -99,7 +104,7 @@
         {{#if place.user_ratings_total}}
           <a href="{{place.url}}" target="_blank">{{place.user_ratings_total}} reviews</a>
         {{else}}
-          <a  href="{{place.url}}" target="_blank">See on Google Maps</a>
+          <a  href="{{place.url}}" target="_blank" class="see-on-google">See on Google Maps</a>
         {{/if}}
         {{#if place.price_level}}
           &bull;
@@ -108,7 +113,6 @@
           </span>
         {{/if}}
       </div>
-      <hr/>
       {{#if place.opening_hours}}
         <div class="hours contact">
           <img src="https://fonts.gstatic.com/s/i/googlematerialicons/schedule/v12/24px.svg"
@@ -156,7 +160,7 @@
             <div id="search-branding-container">
               <img class="search-logo" src="https://ucarecdn.com/e53472ef-dc06-41c5-aedc-154710328ac9/PExLogo1.png"/>
               <h1 class="search-branding">
-              Project Exodus Group Search</h1>
+              Find a Recovery Group Near You</h1>
             </div>
             <div class="search-input">
               <input id="location-search-input" placeholder="Enter your address or zip code">

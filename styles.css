@@ -15,6 +15,9 @@ html,
 
       #map-container a {
         text-decoration: none;
+      }
+
+      .see-on-google {
         color: #1967d2;
       }
 
@@ -203,7 +206,7 @@ html,
         color: #1E90FF;
       }
 
-      #locations-panel-list .option, .send-email-btn {
+      #locations-panel-list .option {
         border: 1px solid #1E90FF;
         border-radius: 0.2rem;
         color: #ffffff;
@@ -221,6 +224,27 @@ html,
         list-style-type: none;
         margin: 0;
         padding: 0;
+      }
+
+      .email {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2.5em 0;
+      }
+  
+      .email-btn {
+        border: 1px #1E90FF solid;
+        color: #fff;
+        padding: 0.3em 1.2em;
+        background-color: #1E90FF;
+        border-radius: 0.2rem;
+        width: 33.3%;
+        text-align: center;
+      }
+      .email-btn:hover {
+        background-color: #fff;
+        color: #1E90FF;
       }
 
       /* ------------- DETAILS PANEL ------------------------------- */
