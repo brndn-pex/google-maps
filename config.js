@@ -26,14 +26,10 @@ const CONFIGURATION = {
       title: "Anthem Church",
       address1: "37 Mackeurtan Ave",
       address2: "Durban North, Durban, 4051, South Africa",
-      coords: { lat: -29.776585744954467, lng: 31.045096106745905 },
-      placeId: "ChIJx_DvskQG9x4RlnU3H0Pa34A",
-    },
-
-    {
-      title: "Anthem Church",
-      address1: "37 Mackeurtan Ave",
-      address2: "Durban North, Durban, 4051, South Africa",
+      startTime: "18h45",
+      endTime: "20h15",
+      url: "https://ucarecdn.com/e53472ef-dc06-41c5-aedc-154710328ac9/PExLogo1.png",
+      day: "Wednesday",
       coords: { lat: -29.776585744954467, lng: 31.045096106745905 },
       placeId: "ChIJx_DvskQG9x4RlnU3H0Pa34A",
     },
