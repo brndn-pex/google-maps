@@ -772,12 +772,7 @@
       function initializeDirections(locator) {
         const directionsCache = new Map();
         const directionsService = new google.maps.DirectionsService();
-        const directionsRenderer = new google.maps.DirectionsRenderer({
-          suppressMarkers: true,
-        });
-
-        // Update directions displayed from the search location to
-        // the selected location on the map.
+        const directionsRenderer = new google.maps.DirectionsRenderer({suppressMarkers: true});
         locator.updateDirections = function() {
           if (!locator.searchLocation || (locator.selectedLocationIdx == null)) {
             return;
