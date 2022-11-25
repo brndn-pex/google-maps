@@ -900,352 +900,383 @@
 
     <script defer>"use strict";
 
-        const CONFIGURATION = {
-          locations: [
+      const CONFIGURATION = {
+        locations: [
             // Monday
-            {
-              title: "3Ci & Shamur Consulting",
-              address1: "56 Saal Street",
-              address2: "Zwavelpoort, Pretoria, South Africa",
-              startTime: "18h30",
-              endTime: "20h30",
-              day: "Monday",
-              coords: { lat: -25.812641262484, lng: 28.351571928836},
-              placeId: "ChIJc-zBAUxclR4RdIRLRymZgww",
-            },
-
-            {
-              title: "Homeground",
-              address1: "2 Church Place",
-              address2: "Westville, Durban, South Africa",
-              startTime: "19h00",
-              endTime: "20h30",
-              day: "Monday",
-              coords: { lat: -29.836617366272876, lng: 30.913995828835997},
-              placeId: "ChIJeaOR7zkA9x4R79dUfHSc0U8",
-            },
-            
-            {
-              title: "ABC Recovery",
-              address1: "5 Fairlen Way",
-              address2: "Unit 13 Phoenix, Durban, South Africa",
-              startTime: "18h30",
-              endTime: "20h00",
-              day: "Monday",
-              coords: { lat: -29.688828492411215, lng: 31.007346684656},
-              placeId: "ChIJF4SMs-wF9x4Rb6OZrpuV53Y",
-            },
-
-            {
-              title: "ADCA",
-              address1: "Against Drugs & Child Abuse Main Street",
-              address2: "Umhlali Village, Ballito, Durban, South Africa",
-              startTime: "18h30",
-              endTime: "20h30",
-              day: "Monday",
-              coords: { lat: -29.4774034507035, lng: 31.217285798147998},
-              placeId: "ChIJITux27YV9x4Rgi-v7AgUDaw",
-            },
-
-            {
-              title: "Grace Family Church, Riverside",
-              address1: "63 Anthony Road",
-              address2: "Umgeni Park, Durban, South Africa",
-              startTime: "18h30",
-              endTime: "20h00",
-              day: "Monday",
-              coords: { lat: -29.801010364907533, lng: 31.02142225317995},
-              placeId: "ChIJ1V3ryBwH9x4RmBkwKuQzRCw",
-            },
-
-            {
-              title: "Hilton Christian Fellowship",
-              address1: "Hilton Christian Fellowship, Elizabeth Drive",
-              address2: "Hilton, South Africa",
-              startTime: "18h00",
-              endTime: "20h00",
-              day: "Monday",
-              coords: { lat: -29.53701103975277, lng: 30.299325113492},
-              placeId: "ChIJvwSzkxRfzB0RRD0wQ8dNANA",
-            },
-
-            {
-              title: "Life Changers",
-              address1: "Life Changers Church, Corner Echium Road & Raats Diver",
-              address2: "Tableview, Capetown South Africa",
-              startTime: "18h30",
-              endTime: "20h30",
-              day: "Monday",
-              coords: { lat: -33.81988036158741, lng: 18.493811526984},
-              placeId: "ChIJ2aXMdHal9h4RSDYldKm-sp8",
-            },
-
-            {
-              title: "Norwegian Settlers Church",
-              address1: "Lot no 17, Marburg Settlement, Izotsha Road",
-              address2: "Marburg, Port Shepstone, South Africa",
-              startTime: "18h30",
-              endTime: "20h00",
-              day: "Monday",
-              coords: { lat: -30.755904812051263, lng: 30.408771100000003},
-              placeId: "ChIJ47WPCSOkWB4R-19RwPkWvYk",
-            },
-             
-            {
-              title: "Elim Recovery",
-              address1: "300 Nutfield Road, Brookeborough",
-              address2: "County Fernanagh, Enniskillen, Northern Ireland",
-              startTime: "18h30",
-              endTime: "20h30",
-              day: "Monday",
-              coords: { lat: 54.31359671871951, lng: -7.40855205980296},
-              placeId: "ChIJa-uFHus7XkgRve3IAvLGlpc",
-            },
-
-            {
-              title: "Hebron Recovery",
-              address1: "180 Moorcross Drive",
-              address2: "Chatsworth, Durban, South Africa",
-              startTime: "18h00",
-              endTime: "19h30",
-              day: "Monday",
-              coords: { lat: -29.899131066337272, lng: 30.86341845485964},
-              placeId: "ChIJc9izEW1V9h4Re9TW8NkBwME",
-            },
-
-            // Tuesday
-            {
-              title: "ADCA - Supporter's Recovery",
-              address1: "Against Drugs & Child Abuse Main Street",
-              address2: "Umhlali Village, Ballito, Durban, South Africa",
-              startTime: "18h30",
-              endTime: "20h00",
-              day: "Tuesday",
-              coords: { lat: -29.4774034507035, lng: 31.217285798147998},
-              placeId: "ChIJITux27YV9x4Rgi-v7AgUDaw",
-            },
-
-            {
-              title: "Urban Recovery",
-              address1: "Urban Life Church, 64 Main Road",
-              address2: "Crowthorn, Midrand, South Africa",
-              startTime: "19h00",
-              endTime: "21h00",
-              day: "Tuesday",
-              coords: { lat: -25.971062969714307, lng: 28.07917801534399},
-              placeId: "ChIJwx9Hqk1wlR4RISpvEuGubWQ",
-            },
-
-            
-            {
-              // Unknown address
-              title: "Recovery Unlimited",
-              address1: "Novon Depot, Kiepersol Road",
-              address2: "Hazyview, Nelspruit, South Africa",
-              startTime: "18h00",
-              endTime: "20h00",
-              day: "Tuesday",
-              // coords: { lat: -25.971062969714307, lng: 28.07917801534399},
-              // placeId: "ChIJwx9Hqk1wlR4RISpvEuGubWQ",
-            },
-             
-            {
-              title: "One Life Recovery",
-              address1: "69 Worlds View Road",
-              address2: "Worlds View, Pietermaritzburg, South Africa",
-              startTime: "18h15",
-              endTime: "20h15",
-              day: "Tuesday",
-              coords: { lat: -29.582961018617933, lng: 30.360273544179993},
-              placeId: "CChIJ-w4PClu79h4RcERm9pKF1YU",
-            },
-
-            {
-              title: "The Rock Church",
-              address1: "1 Tamarind Close",
-              address2: "Sunningdale, Durban, South Africa",
-              startTime: "19h00",
-              endTime: "20h30",
-              day: "Tuesday",
-              coords: { lat: -29.740682836157124, lng: 31.051012571163987},
-              placeId: "ChIJ8x-WedwF9x4R1YqEx9urMMs",
-            },
-
-            {
-              title: "Grace Family Church, Ballito",
-              address1: "R102 Compensation",
-              address2: "Ballito, Durban, South Africa",
-              startTime: "18h30",
-              endTime: "20h00",
-              day: "Tuesday",
-              coords: { lat: -29.508441909622956, lng: 31.18205313971175},
-              placeId: "ChIJlR2iS3kU9x4RDeZOWT1tSEQ",
-            },
-
-            // Wednesday
-            {
-              title: "Anthem Church",
-              address1: "37 Mackeurtan Ave",
-              address2: "Durban North, Durban, 4051, South Africa",
-              startTime: "18h45",
-              endTime: "20h15",
-              day: "Wednesday",
-              coords: { lat: -29.776585744954467, lng: 31.045096106745905 },
-              placeId: "ChIJx_DvskQG9x4RlnU3H0Pa34A",
-            },
-
-            {
-              title: "New Creation Recovery",
-              address1: "New Creation Church, 4 Gemsbok Road",
-              address2: "Robin Hills, Randburg, South Africa",
-              startTime: "19h00",
-              endTime: "21h00",
-              day: "Wednesday",
-              coords: { lat: -26.11425380945689, lng: 27.980105684656},
-              placeId: "ChIJ7cTVeNp0lR4R14gWP-WibNY",
-            },
-
-            {
-              title: "Recovery Unlimited",
-              address1: "Church Unlimited, Plot 50, Touyz Rd",
-              address2: "White River, South Africa",
-              startTime: "18h00",
-              endTime: "20h00",
-              day: "Wednesday",
-              coords: { lat: -25.35065842112878, lng: 31.003920784655996},
-              placeId: "ChIJa_djMEIx6B4RtIUWzqa8X_U",
-            },
-
-            {
-              title: "Recovery Unlimited",
-              address1: "Plot 99, Barberton Road",
-              address2: "Mbombela, Nelspruit, South Africa",
-              startTime: "18h00",
-              endTime: "20h30",
-              day: "Wednesday",
-              coords: { lat: -25.50968124921612, lng: 30.952190684656},
-              placeId: "ChIJ78SoW61L6B4ROmP4orAMEgs",
-            },
-
-            {
-              // Address unclear
-              title: "Hillsong Recovery",
-              address1: "1 Kinetic Avenue, Century City",
-              address2: "Capetown, South Africa",
-              startTime: "18h00",
-              endTime: "20h30",
-              day: "Wednesday",
-              // coords: { lat: -25.50968124921612, lng: 30.952190684656},
-              // placeId: "ChIJ78SoW61L6B4ROmP4orAMEgs",
-            },
-
-            {
-              // Address unclear
-              title: "Hillsong Recovery",
-              address1: "Somerset West Mall, Corner Century Drive & Main Road",
-              address2: "Somerset West, Capetown, South Africa",
-              startTime: "18h30",
-              endTime: "21h00",
-              day: "Wednesday",
-              // coords: { lat: -25.50968124921612, lng: 30.952190684656},
-              // placeId: "ChIJ78SoW61L6B4ROmP4orAMEgs",
-            },
-
-            {
-              title: "Urban Recovery",
-              address1: "Hillsong Centurion Plum Court, 877 Freight Road",
-              address2: "Louwlardia, Centurion, South Africa",
-              startTime: "19h00",
-              endTime: "21h00",
-              day: "Wednesday",
-              coords: { lat: -25.908583569717216, lng: 28.16023508357402},
-              placeId: "ChIJ8aYnuy1klR4R-1WvWVn0F7s",
-            },
-
-            {
-              title: "ABC Recovery",
-              address1: "Grace Worship Tabernacle, 31 Uranus Street",
-              address2: "Woodhurst, Chatsworth, Durban, South Africa",
-              startTime: "18h30",
-              endTime: "20h00",
-              day: "Wednesday",
-              coords: { lat: -29.905137775834525, lng: 30.903506053007938},
-              placeId: "ChIJvVbsPNGq9x4RTIaUIj8h5dg",
-            },
-
-            // Thursday
-            {
-              title: "Grace Family Church, Umhlanga",
-              address1: "400 Umhlanga Rocks Drive",
-              address2: "Umhlanga, Durban, South Africa",
-              startTime: "18h30",
-              endTime: "20h30",
-              day: "Wednesday",
-              coords: { lat: -29.726151327424205, lng: 31.08054589718222},
-              placeId: "ChIJxd2VlVgP9x4R6NypG6U0tHs",
-            },
-
-            {
-              title: "Cornerstone Community Church",
-              address1: "324 Longbury Drive",
-              address2: "Phoenix, Durban, South Africa",
-              startTime: "19h00",
-              endTime: "21h00",
-              day: "Wednesday",
-              coords: { lat: -29.709233377302745, lng: 31.007239457671997},
-              placeId: "ChIJAwsQr40E9x4R5R_CCrNGdhA",
-            },
-
-            {
-              title: "One Life Recovery, Eastwood",
-              address1: "Eastwood Site Social Centre, 55 Kingfisher Road",
-              address2: "Eastwood, Pietermaritzburg, South Africa",
-              startTime: "18h00",
-              endTime: "20h00",
-              day: "Wednesday",
-              coords: { lat: -29.641509362957525, lng: 31.007239457671997},
-              placeId: "ChIJzSp0owy99h4RGG9O_kNJy5k",
-            },
-
-            {
-              title: "ABC Recovery, Caneside",
-              address1: "Brook Christian Fellowship, 22 Spireside",
-              address2: "Caneside, Phoenix, Durban, South Africa",
-              startTime: "18h30",
-              endTime: "20h00",
-              day: "Wednesday",
-              coords: { lat: -29.69032309483706, lng: 31.024592711379967},
-              placeId: "ChIJMaVPD90E9x4Rhyzrkxw_Qg4",
-            },
-        
-             
-             
-          ],
-          mapOptions: {
-            center: { lat: 38.0, lng: -100.0 },
-            fullscreenControl: true,
-            mapTypeControl: false,
-            streetViewControl: false,
-            zoom: 4,
-            zoomControl: true,
-            maxZoom: 17,
-            mapId: "b9f5280014bac665",
+          {
+            title: "3Ci & Shamur Consulting",
+            address1: "56 Saal Street",
+            address2: "Zwavelpoort, Pretoria, South Africa",
+            startTime: "18h30",
+            endTime: "20h30",
+            day: "Monday",
+            coords: { lat: -25.812641262484, lng:28351571928836},
+            placeId: "ChIJc-zBAUxclR4RdIRLRymZgww",
           },
-          mapsApiKey: "AIzaSyBULz8OaS5-O6b8R8HjCtZkePq0z9UAMHk",
+
+          {
+            title: "Home Ground, Westville",
+            address1: "Home Ground Church, 2 Church Place",
+            address2: "Westville, Durban, South Africa",
+            startTime: "19h00",
+            endTime: "20h30",
+            day: "Monday",
+            coords: { lat: -29.836547547923736, lng: 30.913942181841573},
+            placeId: "ChIJiZdZ7zkA9x4R1Q4gzXUeX-w",
+          },
+
+          {
+            title: "ABC Recovery, Phoenix",
+            address1: "5 Fairlen Way, Lenham Unit 13",
+            address2: "Phoenix, Durban, South Africa",
+            startTime: "18h30",
+            endTime: "20h00",
+            day: "Monday",
+            coords: { lat: -29.69618750546807, lng: 30.995287268345173},
+            placeId: "ChIJ-TxQvKME9x4Rex5C9lr4Iac",
+          },
+
+          {
+            title: "ADCA, Ballito",
+            address1: "Against Drugs & Child Abuse Main Street, Umhlali Village",
+            address2: "Ballito, Durban, South Africa",
+            startTime: "18h30",
+            endTime: "20h30",
+            day: "Monday",
+            coords: { lat: -29.47735206285197, lng: 31.217317981830114},
+            placeId: "ChIJITux27YV9x4Rgi-v7AgUDaw",
+          },
+
+          {
+            title: "Grace Family Church, Riverside",
+            address1: "63 Anthony Road",
+            address2: "Umgeni Park, Durban, South Africa",
+            startTime: "18h30",
+            endTime: "20h00",
+            day: "Monday",
+            coords: { lat: -29.80082754127942, lng: 31.021449068348584},
+            placeId: "ChIJLdGlyBwH9x4RPmwwOerDPCc",
+          },
+
+          {
+            title: "Hilton Christian Fellowship",
+            address1: "Hilton Christian Fellowship, Elizabeth Dr",
+            address2: "Hilton, South Africa",
+            startTime: "18h30",
+            endTime: "20h00",
+            day: "Monday",
+            coords: { lat: -29.53702502354832, lng: 30.299389483684138},
+            placeId: "ChIJ2aXMdHal9h4RSDYldKm-sp8",
+          },
+
+          {
+            title: "Life Changers",
+            address1: "Life Changers Church, Corner Echium Rd & Raats Drive",
+            address2: "Tableview, Cape Town, South Africa",
+            startTime: "18h30",
+            endTime: "21h00",
+            day: "Monday",
+            coords: { lat: -33.819893712387284, lng: 18.49381152430468},
+            placeId: "ChIJvwSzkxRfzB0RRD0wQ8dNANA",
+          },
+
+          {
+            title: "Norwegian Settlers",
+            address1: "Lot no 17, Marburg Settlement, Izotsha Road",
+            address2: "Marburg, Port Shepstone, South Africa",
+            startTime: "18h30",
+            endTime: "20h00",
+            day: "Monday",
+            coords: { lat: -30.752276156400534, lng: 30.41413773954357},
+            placeId: "EjNJem90c2hhIFJkLCBHcm9zdmVub3IsIFBvcnQgU2hlcHN0b25lLCBTb3V0aCBBZnJpY2EiLiosChQKEgmhTJ6zGKRYHhF0ujrlNljNpBIUChIJQ9Gvy7amWB4RBmL7UbLDZM0",
+          },
+
+          {
+            title: "Elim Recovery",
+            address1: "300 Nutfield Road, Brookeborough",
+            address2: "County Fernanagh, Enniskillen,Northern Ireland",
+            startTime: "18h30",
+            endTime: "20h30",
+            day: "Monday",
+            coords: { lat: 54.31351535618779, lng: -7.40851987329496},
+            placeId: "ChIJa-uFHus7XkgRve3IAvLGlpc",
+          },
+
+          {
+            title: "Hebron Recovery",
+            address1: "180 Moorcross Drive",
+            address2: "Chatsworth, Durban, South Africa",
+            startTime: "19h00",
+            endTime: "20h30",
+            day: "Monday",
+            coords: { lat: -29.899214774168364, lng: 30.863386268351643},
+            placeId: "ChIJc9izEW1V9h4Re9TW8NkBwME",
+          },
+
+          // Tuesday 
+          {
+            title: "Urban Recovery, Midrand",
+            address1: "Urban Life Church, 64 Maud Avenue",
+            address2: "Crowthorn, Midrand, South Africa",
+            startTime: "19h00",
+            endTime: "21h00",
+            day: "Tuesday",
+            coords: { lat: -25.971048485166985, lng: 28.079135097067713},
+            placeId: "ChIJwx9Hqk1wlR4RISpvEuGubWQ",
+          },
+
+          {
+            // Address is unclear
+            title: "Recovery Unlimited, Hazeyview",
+            address1: "Novon Depot, Kiepersol Road",
+            address2: "Hazyview, South Africa",
+            startTime: "18h00",
+            endTime: "20h00",
+            day: "Tuesday",
+            // coords: { lat: -25.971048485166985, lng: 28.079135097067713},
+            // placeId: "ChIJwx9Hqk1wlR4RISpvEuGubWQ",
+          },
+
+          {
+            title: "One Life Recovery",
+            address1: "69 Worlds View Road",
+            address2: "Worlds View, Pietermaritzburg, South Africa",
+            startTime: "18h15",
+            endTime: "21h15",
+            day: "Tuesday",
+            coords: { lat: -29.57966794072239, lng: 30.32552489717744},
+            placeId: "ChIJHRf_Jb-k9h4Rx6DCGjWHVIk",
+          },
+
+          {
+            title: "The Rock Church",
+            address1: "1 Tamarind Close",
+            address2: " Sunningdale, Durban, South Africa",
+            startTime: "19h00",
+            endTime: "20h30",
+            day: "Tuesday",
+            coords: { lat: -29.740715422837912, lng: 31.051023297182585},
+            placeId: "ChIJ8x-WedwF9x4R1YqEx9urMMs",
+          },
+
+          {
+            title: "Grace Family Church, Ballito",
+            address1: "R102 Compensation",
+            address2: "Ballito, Durban, South Africa",
+            startTime: "18h30",
+            endTime: "20h00",
+            day: "Tuesday",
+            coords: { lat: -29.540153698262603, lng: 31.217266326012236},
+            placeId: "EkFDb21wZW5zYXRpb24gQmVhY2ggUmQsIEJhbGxpdG8sIERvbHBoaW4gQ29hc3QsIDQzOTksIFNvdXRoIEFmcmljYSIuKiwKFAoSCSneLCCAE_ceEfkdnK1F65hQEhQKEgkVg8LxfhT3HhHew1dBVULF8g",
+          },
+
+          // Wednesday
+          {
+            title: "Anthem Recovery",
+            address1: "37 Mackeurtan Avenue",
+            address2: "Durban North, Durban, South Africa",
+            startTime: "18h45",
+            endTime: "20h15",
+            day: "Wednesday",
+            coords: { lat: -29.776585011774657, lng: 31.045632110675818},
+            placeId: "ChIJ8etkt0QG9x4RkeI61IHyJ1A",
+          },
+
+          {
+            title: "New Creation Recovery",
+            address1: "New Creation Church, 4 Gemsbok Road",
+            address2: "Robin Hills, Randburg, South Africa",
+            startTime: "17h00",
+            endTime: "19h00",
+            day: "Wednesday",
+            coords: { lat: -26.11466361129178, lng: 27.979798541251927},
+            placeId: "ChIJZ8q6nNB0lR4RTFXdMMjmfT8",
+          },
+
+          {
+            title: "Recovery Unlimited, White River",
+            address1: "Church Unlimited, Plot 50, Touyz Rd",
+            address2: "Touyz Rd, White River, South Africa",
+            startTime: "18h00",
+            endTime: "20h30",
+            day: "Wednesday",
+            coords: { lat: -25.350734770006962, lng: 31.00400287615004},
+            placeId: "ChIJa_djMEIx6B4RtIUWzqa8X_U",
+          },
+
+          {
+            // Address unclear
+            title: "Recovery Unlimited, Nelspruit",
+            address1: "Recovery Unlimited, Nelspruit",
+            address2: "Mbombela, Nelspruit, South Africa",
+            startTime: "18h00",
+            endTime: "20h30",
+            day: "Wednesday",
+            // coords: { lat: -25.350734770006962, lng: 31.00400287615004},
+            // placeId: "ChIJa_djMEIx6B4RtIUWzqa8X_U",
+          },
+
+          {
+            title: "Hillsong Recovery, Century City",
+            address1: "Hillsong Church, Century City 1 Kinetic Avenue",
+            address2: "Cape Town, South Africa",
+            startTime: "18h30",
+            endTime: "20h00",
+            day: "Wednesday",
+            coords: { lat: -33.89536933667945, lng: 18.506860701027335},
+            placeId: "ChIJdfMhFxFczB0R6jMgOhmE41Q",
+          },
+
+          {
+            title: "Hillsong Recovery, Somerset West",
+            address1: "Somerset West Mall, Corner Century Drive & Main Road",
+            address2: "Cape Town, South Africa",
+            startTime: "18h30",
+            endTime: "21h00",
+            day: "Wednesday",
+            coords: { lat: -34.082831262270346, lng: 18.82344931267403},
+            placeId: "ChIJufJOo1u1zR0Ri60fxpWyizs",
+          },
+
+          {
+            title: "Urban Recovery, Centurion",
+            address1: "Hillsong Centurion Plum Court ,877 Freight Road",
+            address2: "Louwlardia, Centurion, South Africa",
+            startTime: "19h00",
+            endTime: "21h00",
+            day: "Wednesday",
+            coords: { lat: -25.908680074733404, lng: 28.16021362590202},
+            placeId: "ChIJ8aYnuy1klR4R-1WvWVn0F7s",
+          },
+
+          {
+            title: "ABC Recovery, Chatsworth",
+            address1: "Grace Worship Tabernacle, 31 Uranus Street",
+            address2: "Woodhurst, Chatsworth, Durban, South Africa",
+            startTime: "19h00",
+            endTime: "20h30",
+            day: "Wednesday",
+            coords: { lat: -29.90520727742246, lng: 30.903605312531912},
+            placeId: "ChIJ7adNOdGq9x4RT8_HJvUUYNY",
+          },
+
+          // Thursday
+          {
+            title: "Grace Family Church, Umhlanga",
+            address1: "400 Umhlanga Rocks Drive",
+            address2: "Umhlanga, Durban, South Africa",
+            startTime: "18h30",
+            endTime: "20h30",
+            day: "Thursday",
+            coords: { lat: -29.726076791574616, lng: 31.080578083690213},
+            placeId: "ChIJZcxvlVgP9x4RdYqUG6ikIps",
+          },
+
+          {
+            title: "Cornerstone Community Church",
+            address1: "324 Longbury Drive",
+            address2: "Phoneix, Durban, South Africa",
+            startTime: "19h00",
+            endTime: "21h00",
+            day: "Thursday",
+            coords: { lat: -29.709265974215214, lng: 31.007217997181606},
+            placeId: "ChIJAwsQr40E9x4R5R_CCrNGdhA",
+          },
+
+          {
+            title: "One Life Recovery, Eastwood",
+            address1: "Eastwood Site Social Centre, 55 Kingfisher Road",
+            address2: "Eastwood, Pietermaritzburg, South Africa",
+            startTime: "18h00",
+            endTime: "20h00",
+            day: "Thursday",
+            coords: { lat: -29.583295626990704, lng: 30.422965968341593},
+            placeId: "ChIJEdos6g-89h4RX-uVOYvDbQs",
+          },
+
+          {
+            title: "ABC Recovery, Caneside",
+            address1: "Brook Christian Fellowship, 22 Spireside",
+            address2: "Candeside, Phoenix, Durban, South Africa",
+            startTime: "18h30",
+            endTime: "20h00",
+            day: "Thursday",
+            coords: { lat: -29.688786532423933, lng: 31.007464699033054},
+            placeId: "ChIJF4SMs-wF9x4Rb6OZrpuV53Y",
+          },
+
+          // Friday
+          {
+            title: "Olive Tree Church",
+            address1: "113 Florida Road",
+            address2: "Windermere, Durban, South Africa",
+            startTime: "18h30",
+            endTime: "20h00",
+            day: "Friday",
+            coords: { lat: -29.83470447882349, lng: 31.017628554857687},
+            placeId: "ChIJ04ZXc2QH9x4ReJtMETIA18Y",
+          },
+           
+          {
+            title: "DCC, Phoenix",
+            address1: "126 Abervale Road",
+            address2: "Rydalvale, Phoenix, Durban, South Africa",
+            startTime: "19h00",
+            endTime: "20h30",
+            day: "Friday",
+            coords: { lat: -29.706758150337848, lng: 31.00124276834551},
+            placeId: "ChIJ_Y2YWpAE9x4RPD1tj1QE-mg",
+          },
+
+          {
+            title: "Grace Bible Church",
+            address1: "1478 Dlebelendlovu Street, Zone 1",
+            address2: "Pimville, Soweto, South Africa",
+            startTime: "18h00",
+            endTime: "20h00",
+            day: "Friday",
+            coords: { lat: -26.26198831263694, lng: 27.90774926824018},
+            placeId: "ChIJAQPsg3GnlR4RPCCpJMT7250",
+          },
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+             
+             
+        ],
+        mapOptions: {
+          center: { lat: 38.0, lng: -100.0 },
+          fullscreenControl: true,
+          mapTypeControl: false,
+          streetViewControl: false,
+          zoom: 4,
+          zoomControl: true,
+          maxZoom: 17,
+          mapId: "b9f5280014bac665",
+        },
+        mapsApiKey: "AIzaSyBULz8OaS5-O6b8R8HjCtZkePq0z9UAMHk",
           capabilities: {
-            input: true,
-            autocomplete: true,
-            directions: true,
-            distanceMatrix: true,
-            details: true,
-            actions: false,
-          },
-        };
+          input: true,
+          autocomplete: true,
+          directions: true,
+          distanceMatrix: true,
+          details: true,
+          actions: false,
+        },
+      };
         
-        function initMap() {
-          new LocatorPlus(CONFIGURATION);
-        }
-        </script>
+      function initMap() {
+        new LocatorPlus(CONFIGURATION);
+      }
+    </script>
 
   <script id="locator-result-items-tmpl" type="text/x-handlebars-template" defer>
     {{#each locations}}
