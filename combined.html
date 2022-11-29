@@ -46,6 +46,7 @@
         color: #1967d2;
       }
 
+
       #map-container button {
         background: none;
         color: inherit;
@@ -167,6 +168,9 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.12);
         cursor: pointer;
       }
+      #locations-panel-list .location-result:hover {
+        background-color: #1e8fff1a;
+      }
 
       #locations-panel-list .location-result:first-of-type {
         border-top: 1px solid rgba(0, 0, 0, 0.12);
@@ -255,7 +259,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 2.5em 0;
+        margin: 2em 0;
       }
   
       .email-btn {
@@ -274,7 +278,7 @@
 
       /* ------------- DETAILS PANEL ------------------------------- */
       #locations-panel-details {
-        padding: 1.4em;
+        padding: 0.5em 1.5em;
         box-sizing: border-box;
         display: none;
       }
@@ -325,17 +329,18 @@
       #locations-panel-details .address {
         text-align: center;
         font-size: 0.9em;
-        margin-top: 0.8em;
+        margin-top: 1em;
         border-radius: 0.5em;
         border-color: black;
         display: flex;
         flex-direction: column;
-        padding: 1.5em;
+        padding: 1em;
         border: 1px solid;
       }
 
       #locations-panel-details .address .start-time-bold {
         font-weight: bold;
+        margin-bottom: -0.75em;
       }
 
       .groupsLogo {
@@ -1195,7 +1200,7 @@
           {
             title: "Recovery Unlimited, White River",
             url: "../group-logos/unlimited-logo.png",
-            address1: "Church Unlimited, Plot 50, Touyz Rd",
+            address1: "Church Unlimited, Plot 50",
             address2: "Touyz Rd, White River, South Africa",
             startTime: "18h00",
             endTime: "20h30",
@@ -1279,7 +1284,7 @@
             address2: "Lilyvale, Bloemfontein, South Africa",
             startTime: "18h00",
             endTime: "19h30",
-            day: "Saturday",
+            day: "Wednesday",
             email: "igrow.rg@gmail.com",
             coords: { lat: -29.90520727742246, lng: 30.903605312531912},
             placeId: "ChIJ7adNOdGq9x4RT8_HJvUUYNY",
@@ -1550,6 +1555,7 @@
       {{else}}
         <a  href="{{place.url}}" target="_blank" class="see-on-google">See on Google Maps</a>
       {{/if}}
+      
       {{#if place.price_level}}
         &bull;
         <span class="price-dollars">
