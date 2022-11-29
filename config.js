@@ -23,9 +23,11 @@ const CONFIGURATION = {
     },
 
     {
+      url: "../group-logos/anthem-logo.webp",
       title: "Anthem Church",
       address1: "37 Mackeurtan Ave",
       address2: "Durban North, Durban, 4051, South Africa",
+      contactEmail: "maxevans.dev@gmail.com",
       startTime: "18h45",
       endTime: "20h15",
       url: "https://ucarecdn.com/e53472ef-dc06-41c5-aedc-154710328ac9/PExLogo1.png",
