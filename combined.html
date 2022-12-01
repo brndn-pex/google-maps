@@ -428,6 +428,8 @@
         font-weight: 500;
         padding: 0.3em 0.81em;
       }
+
+      
     </style>
     <script defer>
         'use strict';
@@ -441,7 +443,7 @@
       function showElement(el) {
         el.style.display = 'block';
       }
-
+      
       /** Helper function to generate a Google Maps directions URL */
       function generateDirectionsURL(origin, destination) {
         const googleMapsUrlBase = 'https://www.google.com/maps/dir/?';
@@ -503,8 +505,12 @@
           }
         };
 
+        
         // Create a marker for each location.
         const markers = locator.locations.map(function(location, index) {
+          
+        
+          
           const marker = new google.maps.Marker({
             position: location.coords,
             map: locator.map,
@@ -900,6 +906,9 @@
         };
       };
 
+
+window.initMap()
+
     </script>
     
     <!-- Config.js -->
@@ -910,7 +919,6 @@
         locations: [
        
           {
-            
             title: "3Ci & Shamur Consulting",
             url: "../group-logos/3ci-logo.png",
             address1: "56 Saal Street",
@@ -919,7 +927,7 @@
             endTime: "20h30",
             day: "Monday",
             email: "jan@3Ci.co.za",
-            coords: { lat: -25.812641262484, lng:28351571928836},
+            coords: { lat: -25.812641262484, lng: 28351571928836},
             placeId: "ChIJc-zBAUxclR4RdIRLRymZgww",
           },
 
@@ -1500,10 +1508,12 @@
             <circle class="directions-button-background" cx="17" cy="17" r="16.5" stroke="#1967d2"/>
           </svg>
         </a>
+        
       </li>
     {{/each}}
   </script>
   <script id="locator-details-tmpl" type="text/x-handlebars-template">
+    
     <button class="back-button">
       <img class="icon" src="https://fonts.gstatic.com/s/i/googlematerialicons/arrow_back/v11/24px.svg" alt=""/>
     </button>
@@ -1630,7 +1640,7 @@
       </div>
       <div id="locations-panel-details"></div>
     </div>
-    <div id="gmp-map"></div>
+    <div id="gmp-map">  </div>
   </div>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBULz8OaS5-O6b8R8HjCtZkePq0z9UAMHk&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v6_cABCDE" async defer></script>
   </body>
