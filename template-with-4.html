@@ -37,15 +37,12 @@
         width: 100%;
         height: 100%;
         position: relative;
-        font-family: "Plus Jakata Sans", sans-serif;
+        font-family: "Roboto", sans-serif;
         box-sizing: border-box;
       }
 
       #map-container a {
         text-decoration: none;
-      }
-
-      .see-on-google {
         color: #1967d2;
       }
 
@@ -61,7 +58,7 @@
 
       #gmp-map {
         position: absolute;
-        left: 25em;
+        left: 22em;
         top: 0;
         right: 0;
         bottom: 0;
@@ -70,10 +67,10 @@
       #locations-panel {
         position: absolute;
         left: 0;
-        width: 25em;
+        width: 22em;
         top: 0;
         bottom: 0;
-        overflow-y: scroll;
+        overflow-y: auto;
         background: white;
         padding: 0.5em;
         box-sizing: border-box;
@@ -107,17 +104,6 @@
         margin-top: -1em;
       }
 
-      .search-logo {
-        width: 100px;
-        height: auto;
-      }
-
-      #search-branding-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
       #locations-panel-list .search-input {
         width: 100%;
         margin-top: 0.8em;
@@ -170,9 +156,6 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.12);
         cursor: pointer;
       }
-      #locations-panel-list .location-result:hover {
-        background-color: #1e8fff1a;
-      }
 
       #locations-panel-list .location-result:first-of-type {
         border-top: 1px solid rgba(0, 0, 0, 0.12);
@@ -183,7 +166,7 @@
       }
 
       #locations-panel-list .location-result.selected {
-        outline: 2px solid #1e90ff;
+        outline: 2px solid #4285f4;
       }
 
       #locations-panel-list button.select-location {
@@ -192,17 +175,14 @@
       }
 
       #locations-panel-list .location-result h2.name {
-        font-size: 1.2rem;
-        font-weight: 800;
+        font-size: 1em;
+        font-weight: 500;
         margin: 0;
-        padding-right: 0.9em;
       }
 
       #locations-panel-list .location-result .address {
         font-size: 0.9em;
         margin-bottom: 0.5em;
-        padding-right: 0.9em;
-        line-height: 1.5em;
       }
 
       #locations-panel-list .directions-button {
@@ -222,7 +202,7 @@
       #locations-panel-list .location-result .distance {
         position: absolute;
         top: 0.9em;
-        right: 0.9em;
+        right: 0;
         text-align: center;
         font-size: 0.9em;
         width: 5em;
@@ -236,18 +216,16 @@
 
       #locations-panel-list .option-container button:hover,
       #locations-panel-list .option-container a:hover {
-        background-color: #ffffff;
-        color: #1e90ff;
+        background-color: #f1f3f4;
       }
 
       #locations-panel-list .option {
-        border: 1px solid #1e90ff;
-        border-radius: 0.2rem;
-        color: #ffffff;
-        font-size: 0.7rem;
-        font-weight: 300;
+        border: 1px solid #bdc1c6;
+        border-radius: 0.9em;
+        color: #1967d2;
+        font-size: 0.9em;
+        font-weight: 500;
         padding: 0.3em 0;
-        background-color: #1e90ff;
       }
 
       #locations-panel-list .option > span {
@@ -260,30 +238,9 @@
         padding: 0;
       }
 
-      .email {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 2em 0;
-      }
-
-      .email-btn {
-        border: 1px #1e90ff solid;
-        color: #fff;
-        padding: 0.3em 1.2em;
-        background-color: #1e90ff;
-        border-radius: 0.2rem;
-        width: 33.3%;
-        text-align: center;
-      }
-      .email-btn:hover {
-        background-color: #fff;
-        color: #1e90ff;
-      }
-
       /* ------------- DETAILS PANEL ------------------------------- */
       #locations-panel-details {
-        padding: 0.5em 1.5em;
+        padding: 1.4em;
         box-sizing: border-box;
         display: none;
       }
@@ -307,12 +264,12 @@
         vertical-align: bottom;
 
         /* Match link color #1967d2 */
-        fill: black;
+        filter: invert(30%) sepia(67%) saturate(7379%) hue-rotate(209deg)
+          brightness(95%) contrast(80%);
       }
 
       #locations-panel-details > header {
         text-align: center;
-        /* width: 100px; */
       }
 
       #locations-panel-details .banner {
@@ -320,8 +277,8 @@
       }
 
       #locations-panel-details h2 {
-        font-size: 1.5;
-        font-weight: bold;
+        font-size: 1.1em;
+        font-weight: 500;
         margin-bottom: 0.3em;
       }
 
@@ -333,29 +290,13 @@
       #locations-panel-details .address {
         text-align: center;
         font-size: 0.9em;
-        margin-top: 1em;
-        border-radius: 0.5em;
-        border-color: black;
-        display: flex;
-        flex-direction: column;
-        padding: 1em;
-        border: 1px solid;
+        margin-top: 1.3em;
       }
 
-      #locations-panel-details .address .start-time-bold {
-        font-weight: bold;
-        margin-bottom: -0.75em;
-      }
-
-      .groupsLogo {
-        margin-top: -1em;
-        width: 100px;
-        height: auto;
-      }
       #locations-panel-details .atmosphere {
         text-align: center;
         font-size: 0.9em;
-        margin: 2em 0;
+        margin: 0.8em 0;
       }
 
       #locations-panel-details .star-rating-numeric {
@@ -424,17 +365,8 @@
         font-size: 0.8em;
         font-style: italic;
       }
-
-      .send-email-btn {
-        border: 1px solid #2370ce;
-        border-radius: 0.9em;
-        color: #000000;
-        font-size: 0.9em;
-        font-weight: 500;
-        padding: 0.3em 0.81em;
-      }
     </style>
-    <script defer>
+    <script>
       "use strict";
 
       /** Hide a DOM element. */
@@ -517,17 +449,11 @@
         };
 
         // Create a marker for each location.
-        const markers = locator.locations.map(function(location, index) {
-          
-        
-          
+        const markers = locator.locations.map(function (location, index) {
           const marker = new google.maps.Marker({
             position: location.coords,
             map: locator.map,
             title: location.title,
-            icon: mark,
-            optimized: true,
-            scaledSize: new google.maps.Size(25, 25),
           });
           marker.addListener("click", function () {
             selectResultItem(index, false, true);
@@ -579,7 +505,7 @@
 
         locator.renderResultsList = function () {
           let locations = locator.locations.slice();
-          for (let i = 0; i < locations.length; i++) {
+          for (let i = 0; i < locations.length / 2; i++) {
             locations[i].index = i;
           }
           if (locator.searchLocation) {
@@ -662,7 +588,7 @@
           "location-search-button"
         );
 
-        const updateSearchLocation = function(address, location) {
+        const updateSearchLocation = function (address, location) {
           if (locator.searchLocationMarker) {
             locator.searchLocationMarker.setMap(null);
           }
@@ -825,6 +751,9 @@
         const directionsRenderer = new google.maps.DirectionsRenderer({
           suppressMarkers: true,
         });
+
+        // Update directions displayed from the search location to
+        // the selected location on the map.
         locator.updateDirections = function () {
           if (!locator.searchLocation || locator.selectedLocationIdx == null) {
             return;
@@ -961,638 +890,102 @@
           showElement(panelDetailsEl);
         };
       }
-
-      window.initMap();
     </script>
-
-    <!-- Config.js -->
-
-    <script defer>"use strict";
-
-      const CONFIGURATION = {
-        locations: [
-          {
-            title: "3Ci & Shamur Consulting",
-            url: "../group-logos/3ci-logo.png",
-            address1: "56 Saal Street",
-            address2: "Zwavelpoort, Pretoria, South Africa",
-            startTime: "18h30",
-            endTime: "20h30",
-            day: "Monday",
-            email: "jan@3Ci.co.za",
-            coords: { lat: -25.812641262484, lng: 28351571928836},
-            placeId: "ChIJc-zBAUxclR4RdIRLRymZgww",
-          },
-
-          {
-            title: "Home Ground, Westville",
-            url: "../group-logos/homeground-logo.png",
-            address1: "Home Ground Church, 2 Church Place",
-            address2: "Westville, Durban, South Africa",
-            startTime: "19h00",
-            endTime: "20h30",
-            day: "Monday",
-            email: "office@homeground.org.za",
-            coords: { lat: -29.836547547923736, lng: 30.913942181841573},
-            placeId: "ChIJiZdZ7zkA9x4R1Q4gzXUeX-w",
-          },
-
-          {
-            title: "ABC Recovery, Phoenix",
-            url: "../group-logos/abc-logo.png",
-            address1: "5 Fairlen Way, Lenham Unit 13",
-            address2: "Phoenix, Durban, South Africa",
-            startTime: "18h30",
-            endTime: "20h00",
-            day: "Monday",
-            email: "solomongopaul@gmail.com",
-            coords: { lat: -29.69618750546807, lng: 30.995287268345173},
-            placeId: "ChIJ-TxQvKME9x4Rex5C9lr4Iac",
-          },
-
-          {
-            title: "ADCA, Ballito",
-            url: "../group-logos/adca-logo.png",
-            address1: "Against Drugs & Child Abuse Main Street, Umhlali Village",
-            address2: "Ballito, Durban, South Africa",
-            startTime: "18h30",
-            endTime: "20h30",
-            day: "Monday",
-            email: "rex@adca.co.za",
-            coords: { lat: -29.47735206285197, lng: 31.217317981830114},
-            placeId: "ChIJITux27YV9x4Rgi-v7AgUDaw",
-          },
-
-          {
-            title: "Grace Family Church, Riverside",
-            url: "../group-logos/grace-logo.png",
-            address1: "63 Anthony Road",
-            address2: "Umgeni Park, Durban, South Africa",
-            startTime: "18h30",
-            endTime: "20h00",
-            day: "Monday",
-            email: "nicholaseaves07@gmail.com",
-            coords: { lat: -29.80082754127942, lng: 31.021449068348584},
-            placeId: "ChIJLdGlyBwH9x4RPmwwOerDPCc",
-          },
-          
-          {
-            title: "Hilton Christian Fellowship",
-            url: "../group-logos/hcf-logo.png",
-            address1: "Hilton Christian Fellowship, Elizabeth Dr",
-            address2: "Hilton, South Africa",
-            startTime: "18h30",
-            endTime: "20h00",
-            day: "Monday",
-            email: "candy@hcf.org.za",
-            coords: { lat: -29.53702502354832, lng: 30.299389483684138},
-            placeId: "ChIJ2aXMdHal9h4RSDYldKm-sp8",
-          },
-
-          {
-            title: "Life Changers",
-            url: "../group-logos/lifechangers-logo.png",
-            address1: "Life Changers Church, Corner Echium Rd & Raats Drive",
-            address2: "Tableview, Cape Town, South Africa",
-            startTime: "18h30",
-            endTime: "21h00",
-            day: "Monday",
-            email: "michael@lifechangers.org.za",
-            coords: { lat: -33.819893712387284, lng: 18.49381152430468},
-            placeId: "ChIJvwSzkxRfzB0RRD0wQ8dNANA",
-          },
-
-          {
-            title: "Norwegian Settlers",
-            url: "../group-logos/norwegian-logo.png",
-            address1: "Lot no 17, Marburg Settlement, Izotsha Road",
-            address2: "Marburg, Port Shepstone, South Africa",
-            startTime: "18h30",
-            endTime: "20h00",
-            day: "Monday",
-            email: "nscrecoverykzn@gmail.com",
-            coords: { lat: -30.752276156400534, lng: 30.41413773954357},
-            placeId: "EjNJem90c2hhIFJkLCBHcm9zdmVub3IsIFBvcnQgU2hlcHN0b25lLCBTb3V0aCBBZnJpY2EiLiosChQKEgmhTJ6zGKRYHhF0ujrlNljNpBIUChIJQ9Gvy7amWB4RBmL7UbLDZM0",
-          },
-
-          {
-            title: "Elim Recovery",
-            url: "../group-logos/elim-logo.png",
-            address1: "300 Nutfield Road, Brookeborough",
-            address2: "County Fernanagh, Enniskillen,Northern Ireland",
-            startTime: "18h30",
-            endTime: "20h30",
-            day: "Monday",
-            email: "elimrecovery@gmx.co.uk",
-            coords: { lat: 54.31351535618779, lng: -7.40851987329496},
-            placeId: "ChIJa-uFHus7XkgRve3IAvLGlpc",
-          },
-
-          {
-            title: "Hebron Recovery",
-            url: "../group-logos/hebron-logo.png",
-            address1: "180 Moorcross Drive",
-            address2: "Chatsworth, Durban, South Africa",
-            startTime: "19h00",
-            endTime: "20h30",
-            day: "Monday",
-            email: "anthea@hebronrecovery.com",
-            coords: { lat: -29.899214774168364, lng: 30.863386268351643},
-            placeId: "ChIJc9izEW1V9h4Re9TW8NkBwME",
-          },
-
-          {
-            title: "DCC, Mayville",
-            url: "../group-logos/dcc-logo.png",
-            address1: "37 Garth Road",
-            address2: "Mayville, Durban, South Africa",
-            startTime: "18h30",
-            endTime: "20h30",
-            day: "Monday",
-            email: "info@dcc-admin.co.za",
-            coords: { lat: -29.84330516657746, lng: 30.98180591252999},
-            placeId: "ChIJhSEwp64A9x4RkkbCvizJsIU",
-          },
-
-          {
-            title: "Koinonia Recovery Centre",
-            url: "../group-logos/koinonia-logo.png",
-            address1: "4 Kennington Road",
-            address2: "Nahoon, East London, South Africa",
-            startTime: "18h30",
-            endTime: "20h30",
-            day: "Monday",
-            email: "info@koinoniarehab.co.za",
-            coords: { lat: -32.98491819115395, lng: 27.920611510783214},
-            placeId: "ChIJ-WHlGCngZh4RYSYRJnG1SlY",
-          },
-
-          {
-            title: "Koinonia Recovery Centre",
-            url: "../group-logos/koinonia-logo.png",
-            address1: "2 Recreation Road",
-            address2: "Gonubie, East London, South Africa",
-            startTime: "16h30",
-            endTime: "18h30",
-            day: "Monday",
-            email: "info@koinoniarehab.co.za",
-            coords: { lat: -32.936677588482375, lng: 28.026031268453636},
-            placeId: "ChIJdWSswbEYZx4RnSHxXFmaiF8",
-          },
-
-          {
-            title: "The Ark",
-            url: "../group-logos/ark-logo.png",
-            address1: "1 Sterkspruit Road",
-            address2: "Cliffdale, Hillcret, South Africa",
-            startTime: "18h00",
-            endTime: "20h00",
-            day: "Monday",
-            email: "admin@thearkkzn.co.za",
-            coords: { lat: -29.771455477794177, lng: 30.682237666495567},
-            placeId: "ChIJazYmaTvw9h4RVx-8QZhcSx0",
-          },
-
-          {
-            title: "Urban Recovery, Midrand",
-            url: "../group-logos/urban-logo.png",
-            address1: "Urban Life Church, 64 Maud Avenue",
-            address2: "Crowthorn, Midrand, South Africa",
-            startTime: "19h00",
-            endTime: "21h00",
-            day: "Tuesday",
-            email: "steven@urbanrecovery.co.za",
-            coords: { lat: -25.971048485166985, lng: 28.079135097067713},
-            placeId: "ChIJwx9Hqk1wlR4RISpvEuGubWQ",
-          },
-
-          {
-            // Address is unclear
-            title: "Recovery Unlimited, Hazeyview",
-            url: "../group-logos/unlimited-logo.png",
-            address1: "Novon Depot, Kiepersol Road",
-            address2: "Hazyview, South Africa",
-            startTime: "18h00",
-            endTime: "20h00",
-            day: "Tuesday",
-            email: "hazyview@churchunlimited.co.za",
-            coords: { lat: -25.065037319130585, lng: 31.047126028836008},
-            placeId: "ChIJtf___6udwh4RgR5vkJyd6Hw",
-          },
-          
-          {
-            title: "One Life Recovery",
-            url: "../group-logos/onelife-logo.png",
-            address1: "69 Worlds View Road",
-            address2: "Worlds View, Pietermaritzburg, South Africa",
-            startTime: "18h15",
-            endTime: "21h15",
-            day: "Tuesday",
-            email: "recovery@onelifechurch.org.za",
-            coords: { lat: -29.57966794072239, lng: 30.32552489717744},
-            placeId: "ChIJHRf_Jb-k9h4Rx6DCGjWHVIk",
-          },
-
-          {
-            title: "The Rock Church",
-            url: "../group-logos/rock-logo.png",
-            address1: "1 Tamarind Close",
-            address2: "Sunningdale, Durban, South Africa",
-            startTime: "19h00",
-            endTime: "20h30",
-            day: "Tuesday",
-            email: "therockrecovery1@gmail.com",
-            coords: { lat: -29.740715422837912, lng: 31.051023297182585},
-            placeId: "ChIJ8x-WedwF9x4R1YqEx9urMMs",
-          },
-
-          {
-            title: "Grace Family Church, Ballito",
-            url: "../group-logos/grace-logo.png",
-            address1: "R102 Compensation",
-            address2: "Ballito, Durban, South Africa",
-            startTime: "18h30",
-            endTime: "20h00",
-            day: "Tuesday",
-            email: "gracerecoveryballito@gmail.com",
-            coords: { lat: -29.540153698262603, lng: 31.217266326012236},
-            placeId: "EkFDb21wZW5zYXRpb24gQmVhY2ggUmQsIEJhbGxpdG8sIERvbHBoaW4gQ29hc3QsIDQzOTksIFNvdXRoIEFmcmljYSIuKiwKFAoSCSneLCCAE_ceEfkdnK1F65hQEhQKEgkVg8LxfhT3HhHew1dBVULF8g",
-          },
-
-          {
-            title: "City Hill Recovery",
-            url: "../group-logos/cityhill-logo.png",
-            address1: "1 Greenmeadow Lane, Belverdere, Ext 1",
-            address2: "Hillcrest, Durban, South Africa",
-            startTime: "19h00",
-            endTime: "20h30",
-            day: "Tuesday",
-            email: "hello@cityhill.co.za",
-            coords: { lat: -29.760757379407043, lng: 30.78012448369122},
-            placeId: "ChIJ-weaWRP79h4RYi13Qtb8Bco",
-          },
-
-          {
-            title: "Anthem Recovery",
-            url: "../group-logos/anthem-logo.png",
-            address1: "37 Mackeurtan Avenue",
-            address2: "Durban North, Durban, South Africa",
-            startTime: "18h45",
-            endTime: "20h15",
-            day: "Wednesday",
-            email: "chris@projectexodus.net",
-            coords: { lat: -29.776585011774657, lng: 31.045632110675818},
-            placeId: "ChIJ8etkt0QG9x4RkeI61IHyJ1A",
-          },
-
-          {
-            title: "New Creation Recovery",
-            url: "../group-logos/new-creation-logo.png",
-            address1: "New Creation Church, 4 Gemsbok Road",
-            address2: "Robin Hills, Randburg, South Africa",
-            startTime: "17h00",
-            endTime: "19h00",
-            day: "Wednesday",
-            email: "recovery@newcreation.co.za",
-            coords: { lat: -26.11466361129178, lng: 27.979798541251927},
-            placeId: "ChIJZ8q6nNB0lR4RTFXdMMjmfT8",
-          },
-
-          {
-            title: "Recovery Unlimited, White River",
-            url: "../group-logos/unlimited-logo.png",
-            address1: "Church Unlimited, Plot 50",
-            address2: "Touyz Rd, White River, South Africa",
-            startTime: "18h00",
-            endTime: "20h30",
-            day: "Wednesday",
-            email: "info@churchunlimited.co.za",
-            coords: { lat: -25.350734770006962, lng: 31.00400287615004},
-            placeId: "ChIJa_djMEIx6B4RtIUWzqa8X_U",
-          },
-
-          {
-            title: "Recovery Unlimited, Nelspruit",
-            url: "../group-logos/unlimited-logo.png",
-            address1: "Recovery Unlimited, Nelspruit",
-            address2: "Mbombela, Nelspruit, South Africa",
-            startTime: "18h00",
-            endTime: "20h30",
-            day: "Wednesday",
-            email: "info@churchunlimited.co.za",
-            coords: { lat: -25.350734770006962, lng: 31.00400287615004},
-            placeId: "ChIJa_djMEIx6B4RtIUWzqa8X_U",
-          },
-
-          {
-            title: "Hillsong Recovery, Century City",
-            url: "../group-logos/hillsong-logo.png",
-            address1: "Hillsong Church, Century City 1 Kinetic Avenue",
-            address2: "Cape Town, South Africa",
-            startTime: "18h30",
-            endTime: "20h00",
-            day: "Wednesday",
-            email: "recovery@hillsong.co.za",
-            coords: { lat: -33.89536933667945, lng: 18.506860701027335},
-            placeId: "ChIJdfMhFxFczB0R6jMgOhmE41Q",
-          },
-          
-          {
-            title: "Hillsong Recovery, Somerset West",
-            url: "../group-logos/hillsong-logo.png",
-            address1: "Somerset West Mall, Corner Century Drive & Main Road",
-            address2: "Cape Town, South Africa",
-            startTime: "18h30",
-            endTime: "21h00",
-            day: "Wednesday",
-            email: "lizzievissie@gmail.com",
-            coords: { lat: -34.082831262270346, lng: 18.82344931267403},
-            placeId: "ChIJufJOo1u1zR0Ri60fxpWyizs",
-          },
-
-          {
-            title: "Urban Recovery, Centurion",
-            url: "../group-logos/urban-logo.png",
-            address1: "Hillsong Centurion Plum Court ,877 Freight Road",
-            address2: "Louwlardia, Centurion, South Africa",
-            startTime: "19h00",
-            endTime: "21h00",
-            day: "Wednesday",
-            email: "steven@urbanrecovery.co.za",
-            coords: { lat: -25.908680074733404, lng: 28.16021362590202},
-            placeId: "ChIJ8aYnuy1klR4R-1WvWVn0F7s",
-          },
-
-          {
-            title: "ABC Recovery, Chatsworth",
-            url: "../group-logos/abc-logo.png",
-            address1: "Grace Worship Tabernacle, 31 Uranus Street",
-            address2: "Woodhurst, Chatsworth, Durban, South Africa",
-            startTime: "19h00",
-            endTime: "20h30",
-            day: "Wednesday",
-            email: "solomongopaul@gmail.com",
-            coords: { lat: -29.90520727742246, lng: 30.903605312531912},
-            placeId: "ChIJ7adNOdGq9x4RT8_HJvUUYNY",
-          },
-
-          {
-            // Address unclear
-            title: "IGrow",
-            url: "../group-logos/igrow-logo.png",
-            address1: "Bloemendal St",
-            address2: "Lilyvale, Bloemfontein, South Africa",
-            startTime: "18h00",
-            endTime: "19h30",
-            day: "Wednesday",
-            email: "igrow.rg@gmail.com",
-            coords: { lat: -29.075877516299844, lng: 26.206926255820004},
-            placeId: "EkVCbG9lbWVuZGFsIFN0ICYgTGlseXZhbGUgU3QsIFJheXRvbiwgQmxvZW1mb250ZWluLCA5MzAxLCBTb3V0aCBBZnJpY2EiZiJkChQKEgm97kjK6tqPHhGqApht0f6zzhIUChIJve5Iyurajx4RqgKYbdH-s84aFAoSCclnIlrr2o8eEYlVvOqnCSs8GhQKEgnVuykk6tqPHhF66Z1VhxaHeSIKDTysq-4VTM6eDw",
-          },
-           
-          {
-            title: "Koinonia Recovery Centre",
-            url: "../group-logos/koinonia-logo.png",
-            address1: "Near Umzimvubu St",
-            address2: "Nompumelelo, East London, South Africa",
-            startTime: "13h00",
-            endTime: "14h00",
-            day: "Wednesday",
-            email: "zandile@koinoniarehab.co.za",
-            coords: { lat: -32.954287138729164, lng: 27.924731584655998},
-            placeId: "EjpVbXppbXZ1YnUgU3QsIE5vbXB1bWVsZWxvLCBFYXN0IExvbmRvbiwgNTI0MSwgU291dGggQWZyaWNhIi4qLAoUChIJRVwt2wHgZh4Rp_dcExaKX10SFAoSCRvox4YB4GYeEfjDXHjh7HQ8",
-          },
-           
-          {
-            title: "Grace Family Church, Umhlanga",
-            url: "../group-logos/grace-logo.png",
-            address1: "400 Umhlanga Rocks Drive",
-            address2: "Umhlanga, Durban, South Africa",
-            startTime: "18h30",
-            endTime: "20h30",
-            day: "Thursday",
-            email: "info@novacc.co.za",
-            coords: { lat: -29.726076791574616, lng: 31.080578083690213},
-            placeId: "ChIJZcxvlVgP9x4RdYqUG6ikIps",
-          },
-         
-          {
-            title: "Cornerstone Community Church",
-            url: "../group-logos/cornerstone-logo.png",
-            address1: "324 Longbury Drive",
-            address2: "Phoneix, Durban, South Africa",
-            startTime: "19h00",
-            endTime: "21h00",
-            day: "Thursday",
-            email: "raheel@cast.org.za",
-            coords: { lat: -29.709265974215214, lng: 31.007217997181606},
-            placeId: "ChIJAwsQr40E9x4R5R_CCrNGdhA",
-          },
-
-          {
-            title: "One Life Recovery, Eastwood",
-            url: "../group-logos/onelife-logo.png",
-            address1: "Eastwood Site Social Centre, 55 Kingfisher Road",
-            address2: "Eastwood, Pietermaritzburg, South Africa",
-            startTime: "18h00",
-            endTime: "20h00",
-            day: "Thursday",
-            email: "kemsleyb210@gmail.com",
-            coords: { lat: -29.583295626990704, lng: 30.422965968341593},
-            placeId: "ChIJEdos6g-89h4RX-uVOYvDbQs",
-          },
-         
-          {
-            title: "ABC Recovery, Caneside",
-            url: "../group-logos/abc-logo.png",
-            address1: "Brook Christian Fellowship, 22 Spireside",
-            address2: "Candeside, Phoenix, Durban, South Africa",
-            startTime: "18h30",
-            endTime: "20h00",
-            day: "Thursday",
-            email: "solomongopaul@gmail.com",
-            coords: { lat: -29.688786532423933, lng: 31.007464699033054},
-            placeId: "ChIJF4SMs-wF9x4Rb6OZrpuV53Y",
-          },
-
-          {
-            title: "Hope Restoration Ministries",
-            url: "../group-logos/hope-logo.png",
-            address1: "1 Beynon Close, Zuurfontein 33-Ir",
-            address2: "Kempton Park, South Africa",
-            startTime: "18h30",
-            endTime: "20h00",
-            day: "Thursday",
-            email: "smatumba@hrm.org.za",
-            coords: { lat: -26.07946725401902, lng: 28.188342912414996},
-            placeId: "ChIJjcmMnbRslR4RaYfqW7qZJoQ",
-          },
-
-          {
-            title: "Light House Recovery",
-            url: "../group-logos/lighthouse-logo.png",
-            address1: "41 Grey Avenue",
-            address2: "Table View, Cape Town, South Africa",
-            startTime: "18h30",
-            endTime: "20h30",
-            day: "Thursday",
-            email: "bwhitticom@gmail.com",
-            coords: { lat: -33.82934239482746, lng: 18.494697954992994},
-            placeId: "ChIJu3CN3BlfzB0RaG-TlnbIUAw",
-          },
-
-          {
-            title: "Olive Tree Church",
-            url: "../group-logos/otc-logo.png",
-            address1: "113 Florida Road",
-            address2: "Windermere, Durban, South Africa",
-            startTime: "18h30",
-            endTime: "20h00",
-            day: "Friday",
-            email: "gareth@projectexodus.net",
-            coords: { lat: -29.83470447882349, lng: 31.017628554857687},
-            placeId: "ChIJ04ZXc2QH9x4ReJtMETIA18Y",
-          },
-           
-          {
-            title: "DCC, Phoenix",
-            url: "../group-logos/dcc-logo.png",
-            address1: "126 Abervale Road",
-            address2: "Rydalvale, Phoenix, Durban, South Africa",
-            startTime: "19h00",
-            endTime: "20h30",
-            day: "Friday",
-            email: "info@dcc-admin.co.za",
-            coords: { lat: -29.706758150337848, lng: 31.00124276834551},
-            placeId: "ChIJ_Y2YWpAE9x4RPD1tj1QE-mg",
-          },
-
-          {
-            title: "Grace Bible Church",
-            url: "../group-logos/gracebible-logo.png",
-            address1: "1478 Dlebelendlovu Street, Zone 1",
-            address2: "Pimville, Soweto, South Africa",
-            startTime: "18h00",
-            endTime: "20h00",
-            day: "Friday",
-            email: "recovery@gracebiblechurch.org.za",
-            coords: { lat: -26.26198831263694, lng: 27.90774926824018},
-            placeId: "ChIJAQPsg3GnlR4RPCCpJMT7250",
-          },
-
-          {
-            // Address unclear
-            title: "IGrow",
-            url: "../group-logos/igrow-logo.png",
-            address1: "31 Martin St",
-            address2: "Bloemspruit, Bloemfontein, South Africa",
-            startTime: "10h00",
-            endTime: "12h00",
-            day: "Saturday",
-            email: "igrow.rg@gmail.com",
-            coords: { lat: 29.130008649581963, lng: 26.316673871163996},
-            placeId: "ChIJn2xmxdPPjx4R3ip8UJnj184",
-          },
-           
-          { 
-              title: "180° RCVRY",
-              url: "../group-logos/180-logo.png",
-              address1: "37 Mackuertan Avenue",
-              address2: "Durban North, Durban, South Africa",
-              startTime: "15h00",
-              endTime: "16h00",
-              day: "Sunday",
-              email: "jaydamungavin@gmail.com",
-              coords: { lat: -29.776603636355592, lng: 31.045664297183816},
-              placeId: "ChIJ8etkt0QG9x4RkeI61IHyJ1A",
-            }
-  
-        ],
-        mapOptions: {
-          center: { lat: 38.0, lng: -100.0 },
-          fullscreenControl: true,
-          mapTypeControl: false,
-          streetViewControl: false,
-          zoom: 4,
-          zoomControl: true,
-          maxZoom: 17,
-          mapId: "b9f5280014bac665",
-        },
-        mapsApiKey: "AIzaSyBULz8OaS5-O6b8R8HjCtZkePq0z9UAMHk",
-          capabilities: {
-          input: true,
-          autocomplete: true,
-          directions: true,
-          distanceMatrix: true,
-          details: true,
-          actions: false,
-        },
-      };
-        
-      function initMap() {
-        new LocatorPlus(CONFIGURATION);
-      }
-    </script>
-
-  <script id="locator-result-items-tmpl" type="text/x-handlebars-template" defer>
-    {{#each locations}}
-      <li class="location-result" data-location-index="{{index}}">
-        <button class="select-location">
-          <h2 class="name">{{title}}</h2>
-        </button>
-        <div class="address">{{address1}}<br>{{address2}}</div>
-        <div class="options">
-          <div class="option-container">
-            <button class="details-button option">
-              <span>MORE INFO</span>
-            </button>
+    <script src="config.js"></script>
+    <script id="locator-result-items-tmpl" type="text/x-handlebars-template">
+      {{#each locations}}
+        <li class="location-result" data-location-index="{{index}}">
+          <button class="select-location">
+            <h2 class="name">{{title}}</h2>
+          </button>
+          <div class="address">{{address1}}<br />{{address2}}</div>
+          <div class="options">
+            <div class="option-container">
+              <button class="details-button option">
+                <span>View details</span>
+              </button>
+            </div>
           </div>
-        </div>
-        {{#if travelDistanceText}}
-          <div class="distance">{{travelDistanceText}}</div>
-        {{/if}}
-        <a class="directions-button" href="" target="_blank" title="Get directions to this location on Google Maps">
-          <svg width="34" height="34" viewBox="0 0 34 34"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.5867 9.24375L17.9403 8.8902V8.8902L17.5867 9.24375ZM16.4117 9.24375L16.7653 9.59731L16.7675 9.59502L16.4117 9.24375ZM8.91172 16.7437L8.55817 16.3902L8.91172 16.7437ZM8.91172 17.9229L8.55817 18.2765L8.55826 18.2766L8.91172 17.9229ZM16.4117 25.4187H16.9117V25.2116L16.7652 25.0651L16.4117 25.4187ZM16.4117 25.4229H15.9117V25.63L16.0582 25.7765L16.4117 25.4229ZM25.0909 17.9229L25.4444 18.2765L25.4467 18.2742L25.0909 17.9229ZM25.4403 16.3902L17.9403 8.8902L17.2332 9.5973L24.7332 17.0973L25.4403 16.3902ZM17.9403 8.8902C17.4213 8.3712 16.5737 8.3679 16.0559 8.89248L16.7675 9.59502C16.8914 9.4696 17.1022 9.4663 17.2332 9.5973L17.9403 8.8902ZM16.0582 8.8902L8.55817 16.3902L9.26527 17.0973L16.7653 9.5973L16.0582 8.8902ZM8.55817 16.3902C8.0379 16.9105 8.0379 17.7562 8.55817 18.2765L9.26527 17.5694C9.13553 17.4396 9.13553 17.227 9.26527 17.0973L8.55817 16.3902ZM8.55826 18.2766L16.0583 25.7724L16.7652 25.0651L9.26517 17.5693L8.55826 18.2766ZM15.9117 25.4187V25.4229H16.9117V25.4187H15.9117ZM16.0582 25.7765C16.5784 26.2967 17.4242 26.2967 17.9444 25.7765L17.2373 25.0694C17.1076 25.1991 16.895 25.1991 16.7653 25.0694L16.0582 25.7765ZM17.9444 25.7765L25.4444 18.2765L24.7373 17.5694L17.2373 25.0694L17.9444 25.7765ZM25.4467 18.2742C25.9631 17.7512 25.9663 16.9096 25.438 16.3879L24.7354 17.0995C24.8655 17.2279 24.8687 17.4363 24.7351 17.5716L25.4467 18.2742Z" fill="#1967d2"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M19 19.8333V17.75H15.6667V20.25H14V16.9167C14 16.4542 14.3708 16.0833 14.8333 16.0833H19V14L21.9167 16.9167L19 19.8333Z" fill="#1967d2"/>
-            <circle class="directions-button-background" cx="17" cy="17" r="16.5" stroke="#1967d2"/>
+          {{#if travelDistanceText}}
+            <div class="distance">{{travelDistanceText}}</div>
+          {{/if}}
+          <a
+            class="directions-button"
+            href=""
+            target="_blank"
+            title="Get directions to this location on Google Maps"
+          >
+            <svg
+              width="34"
+              height="34"
+              viewBox="0 0 34 34"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.5867 9.24375L17.9403 8.8902V8.8902L17.5867 9.24375ZM16.4117 9.24375L16.7653 9.59731L16.7675 9.59502L16.4117 9.24375ZM8.91172 16.7437L8.55817 16.3902L8.91172 16.7437ZM8.91172 17.9229L8.55817 18.2765L8.55826 18.2766L8.91172 17.9229ZM16.4117 25.4187H16.9117V25.2116L16.7652 25.0651L16.4117 25.4187ZM16.4117 25.4229H15.9117V25.63L16.0582 25.7765L16.4117 25.4229ZM25.0909 17.9229L25.4444 18.2765L25.4467 18.2742L25.0909 17.9229ZM25.4403 16.3902L17.9403 8.8902L17.2332 9.5973L24.7332 17.0973L25.4403 16.3902ZM17.9403 8.8902C17.4213 8.3712 16.5737 8.3679 16.0559 8.89248L16.7675 9.59502C16.8914 9.4696 17.1022 9.4663 17.2332 9.5973L17.9403 8.8902ZM16.0582 8.8902L8.55817 16.3902L9.26527 17.0973L16.7653 9.5973L16.0582 8.8902ZM8.55817 16.3902C8.0379 16.9105 8.0379 17.7562 8.55817 18.2765L9.26527 17.5694C9.13553 17.4396 9.13553 17.227 9.26527 17.0973L8.55817 16.3902ZM8.55826 18.2766L16.0583 25.7724L16.7652 25.0651L9.26517 17.5693L8.55826 18.2766ZM15.9117 25.4187V25.4229H16.9117V25.4187H15.9117ZM16.0582 25.7765C16.5784 26.2967 17.4242 26.2967 17.9444 25.7765L17.2373 25.0694C17.1076 25.1991 16.895 25.1991 16.7653 25.0694L16.0582 25.7765ZM17.9444 25.7765L25.4444 18.2765L24.7373 17.5694L17.2373 25.0694L17.9444 25.7765ZM25.4467 18.2742C25.9631 17.7512 25.9663 16.9096 25.438 16.3879L24.7354 17.0995C24.8655 17.2279 24.8687 17.4363 24.7351 17.5716L25.4467 18.2742Z"
+                fill="#1967d2"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M19 19.8333V17.75H15.6667V20.25H14V16.9167C14 16.4542 14.3708 16.0833 14.8333 16.0833H19V14L21.9167 16.9167L19 19.8333Z"
+                fill="#1967d2"
+              ></path>
+              <circle
+                class="directions-button-background"
+                cx="17"
+                cy="17"
+                r="16.5"
+                stroke="#1967d2"
+              ></circle>
+            </svg>
+          </a>
+        </li>
+      {{/each}}
+    </script>
+    <script id="locator-details-tmpl" type="text/x-handlebars-template">
+      <button class="back-button">
+        <img
+          class="icon"
+          src="https://fonts.gstatic.com/s/i/googlematerialicons/arrow_back/v11/24px.svg"
+          alt=""
+        />
+        Back
+      </button>
+      <header>
+        <div class="banner">
+          <svg
+            width="23"
+            height="32"
+            viewBox="0 0 23 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M22.9976 11.5003C22.9976 13.2137 22.7083 14.9123 21.8025 16.7056C18.6321 22.9832 12.7449 24.3314 12.2758 30.7085C12.2448 31.1294 11.9286 31.4744 11.4973 31.4744C11.0689 31.4744 10.7527 31.1294 10.7218 30.7085C10.2527 24.3314 4.3655 22.9832 1.19504 16.7056C0.289306 14.9123 0 13.2137 0 11.5003C0 5.13275 5.14557 0 11.5003 0C17.852 0 22.9976 5.13275 22.9976 11.5003Z"
+              fill="#4285F4"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              transform="translate(5.5,5.5)"
+              d="M6 8.84091L9.708 11L8.724 6.92961L12 4.19158L7.6856 3.83881L6 0L4.3144 3.83881L0 4.19158L3.276 6.92961L2.292 11L6 8.84091Z"
+              fill="#FBE15C"
+            ></path>
           </svg>
-        </a>
-        
-      </li>
-    {{/each}}
-  </script>
-  <script id="locator-details-tmpl" type="text/x-handlebars-template">
-    
-    <button class="back-button">
-      <img class="icon" src="https://fonts.gstatic.com/s/i/googlematerialicons/arrow_back/v11/24px.svg" alt=""/>
-    </button>
-    <header> 
-      <div class="banner">
-        <img class="groupsLogo" src="{{location.url}}"/>
+        </div>
+        <h2>{{location.title}}</h2>
+      </header>
+      {{#if location.travelDistanceText}}
+        <div class="distance">{{location.travelDistanceText}} away</div>
+      {{/if}}
+      <div class="address">
+        {{location.address1}}<br />
+        {{location.address2}}
       </div>
-      <h2>{{location.title}}</h2>
-    </header>
-    <hr/>
-    {{#if location.travelDistanceText}}
-      <div class="distance">{{location.travelDistanceText}} away</div>
-    {{/if}}
-    <div class="address">
-      <b>{{location.address1}}</b><br>
-      {{location.address2}}
-    </div>
-    <br>
-    <div class="address"><span class="start-time-bold">Day of the week:</span><br>{{location.day}}</div>
-    <div class="address">
-      <span class="start-time-bold">Start Time:</span><br> {{location.startTime}}
-    </div>
-    <div class="address"><span class="start-time-bold">End Time:</span><br> {{location.endTime}}</div>
-    
-    <div class="email">
-      <a href="mailto: {{location.email}} " class="email-btn">Email</a>
-    </div>
-
       <div class="atmosphere">
         {{#if place.rating}}
           <span class="star-rating-numeric">{{place.rating}}</span>
@@ -1624,10 +1017,8 @@
           <a href="{{place.url}}" target="_blank">{{place.user_ratings_total}}
             reviews</a>
         {{else}}
-          <a href="{{place.url}}" target="_blank" class="see-on-google">See on
-            Google Maps</a>
+          <a href="{{place.url}}" target="_blank">See on Google Maps</a>
         {{/if}}
-
         {{#if place.price_level}}
           &bull;
           <span class="price-dollars">
@@ -1635,6 +1026,7 @@
           </span>
         {{/if}}
       </div>
+      <hr />
       {{#if place.opening_hours}}
         <div class="hours contact">
           <img
@@ -1687,35 +1079,50 @@
     </script>
   </head>
   <body>
-  <div id="map-container">
-    <div id="locations-panel">
-      <div id="locations-panel-list">
-        <header>
-          <div id="search-branding-container">
-            <img class="search-logo" src="https://ucarecdn.com/e53472ef-dc06-41c5-aedc-154710328ac9/PExLogo1.png"/>
-            <h1 class="search-branding">
-            Find a Recovery Group Near You</h1>
-          </div>
-          <div class="search-input">
-            <input id="location-search-input" placeholder="Enter your address or zip code">
-            <div id="search-overlay-search" class="search-input-overlay search">
-              <button id="location-search-button">
-                <img class="icon" src="https://fonts.gstatic.com/s/i/googlematerialicons/search/v11/24px.svg" alt="Search"/>
-              </button>
+    <div id="map-container">
+      <div id="locations-panel">
+        <div id="locations-panel-list">
+          <header>
+            <h1 class="search-title">
+              <img
+                src="https://fonts.gstatic.com/s/i/googlematerialicons/place/v15/24px.svg"
+              />
+              Find a location near you
+            </h1>
+            <div class="search-input">
+              <input
+                id="location-search-input"
+                placeholder="Enter your address or zip code"
+              />
+              <div
+                id="search-overlay-search"
+                class="search-input-overlay search"
+              >
+                <button id="location-search-button">
+                  <img
+                    class="icon"
+                    src="https://fonts.gstatic.com/s/i/googlematerialicons/search/v11/24px.svg"
+                    alt="Search"
+                  />
+                </button>
+              </div>
             </div>
+          </header>
+          <div class="section-name" id="location-results-section-name">
+            All locations
           </div>
-        </header>
-        <div class="section-name" id="location-results-section-name">
-          All Groups
+          <div class="results">
+            <ul id="location-results-list"></ul>
+          </div>
         </div>
-        <div class="results">
-          <ul id="location-results-list"></ul>
-        </div>
+        <div id="locations-panel-details"></div>
       </div>
-      <div id="locations-panel-details"></div>
+      <div id="gmp-map"></div>
     </div>
-    <div id="gmp-map">  </div>
-  </div>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBULz8OaS5-O6b8R8HjCtZkePq0z9UAMHk&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v6_cABCDE" async defer></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBULz8OaS5-O6b8R8HjCtZkePq0z9UAMHk&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v6_cABCDE"
+      async
+      defer
+    ></script>
   </body>
 </html>
