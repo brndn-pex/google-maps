@@ -23,6 +23,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/handlebars/4.7.7/handlebars.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
       html,
       body {
         height: 100%;
@@ -40,7 +42,6 @@
 
       #map-container a {
         text-decoration: none;
-        color: #1967d2;
       }
 
       #map-container button {
@@ -67,10 +68,11 @@
         width: 22em;
         top: 0;
         bottom: 0;
-        overflow-y: auto;
+        overflow-y: scroll;
         background: white;
         padding: 0.5em;
         box-sizing: border-box;
+        font-family: "Plus Jakarta Sans", sans-serif;
       }
 
       @media only screen and (max-width: 876px) {
@@ -87,13 +89,29 @@
       }
 
       #locations-panel-list > header {
-        padding: 1.4em 1.4em 0 1.4em;
+        padding: 0em 1.4em;
+      }
+
+      .title-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .search-logo {
+        width: 100px;
+        height: auto;
+        margin: 1em 0;
       }
 
       #locations-panel-list h1.search-title {
-        font-size: 1em;
-        font-weight: 500;
+        font-size: 2em;
+        font-weight: 700;
         margin: 0;
+        text-align: center;
       }
 
       #locations-panel-list h1.search-title > img {
@@ -103,7 +121,7 @@
 
       #locations-panel-list .search-input {
         width: 100%;
-        margin-top: 0.8em;
+        margin: 1.5em 0;
         position: relative;
       }
 
@@ -172,8 +190,8 @@
       }
 
       #locations-panel-list .location-result h2.name {
-        font-size: 1em;
-        font-weight: 500;
+        font-size: 1.3rem;
+        font-weight: 900;
         margin: 0;
       }
 
@@ -217,12 +235,19 @@
       }
 
       #locations-panel-list .option {
-        border: 1px solid #bdc1c6;
-        border-radius: 0.9em;
-        color: #1967d2;
-        font-size: 0.9em;
-        font-weight: 500;
-        padding: 0.3em 0;
+        border: 1px solid #1E90FF;
+        border-radius: 0.2rem;
+        color: #ffffff;
+        font-size: 0.7rem;
+        font-weight: 300;
+        padding: 0.3em 0.5em;
+        background-color: #1E90FF;
+        text-transform: uppercase;
+        margin: 0 0 0.25em 0;
+      }
+      #locations-panel-list .option:hover{
+        color: #1E90FF;
+        background-color: #fff;
       }
 
       #locations-panel-list .option > span {
@@ -233,6 +258,9 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
+      }
+      #location-results-list li:hover {
+        background-color: #1e8fff22;
       }
 
       /* ------------- DETAILS PANEL ------------------------------- */
@@ -269,12 +297,12 @@
       }
 
       #locations-panel-details .banner {
-        margin-top: 1em;
+        margin-top: 2em;
       }
 
       #locations-panel-details h2 {
-        font-size: 1.1em;
-        font-weight: 500;
+        font-size: 1.7em;
+        font-weight: 600;
         margin-bottom: 0.3em;
       }
 
@@ -287,6 +315,32 @@
         text-align: center;
         font-size: 0.9em;
         margin-top: 1.3em;
+        border: 1px solid #000;
+        border-radius: 0.4em;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 1.4em 0;
+      }
+
+      .email {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .email-btn {
+        color: white;
+        font-size: 1em;
+        margin: 2em 0;
+        border: 1px solid #1E90FF;
+        border-radius: 0.2rem;
+        padding: 0.25em 3em;
+        background-color: #1E90FF;
+        text-transform: uppercase;
+      }
+      .email-btn:hover {
+        color: #1E90FF;
+        background-color: #fff;
       }
 
       #locations-panel-details .atmosphere {
@@ -360,6 +414,18 @@
         font-size: 0.8em;
         font-style: italic;
       }
+
+      .start-time-bold {
+        font-weight: 600;
+        margin-bottom: -1em;
+      }
+
+      .banner-img {
+        margin-top: -1em;
+        width: 100px;
+        height: auto;
+      }
+
     </style>
     <script>
       'use strict';
@@ -664,6 +730,7 @@
         });
       }
 
+
       /** Initialize Distance Matrix for the locator. */
       function initializeDistanceMatrix(locator) {
         const distanceMatrixService = new google.maps.DistanceMatrixService();
@@ -840,18 +907,59 @@
     <script>
       const CONFIGURATION = {
         "locations": [
-          {"title":"Project Exodus","address1":"37 Mackeurtan Avenue","address2":"Durban, South Africa","coords":{"lat":-29.7767899,"lng":31.0456643},"placeId":"ChIJ8etkt0QG9x4RGGAMT2AkzKc"},
-          {"title":"Anthem Recovery House","address1":"125 Adelaide Tambo DR","address2":"Durban, South Africa","coords":{"lat":-29.775667,"lng":31.043463},"placeId":"ChIJRQ2OshwH9x4R9S2YG9004P4"}
+          {
+            "title":"Home Ground",
+            "address1":"2 Church Place, Westville",
+            "address2":"Durban, South Africa",
+            "day": "Monday",
+            "startTime": "19:00",
+            "endTime": "20:30",
+            "url": "./group-logos/homeground-logo.png",
+            "email": "office@homeground.org.za",
+            "coords":{"lat":-29.836594081463364, "lng":30.913995826021576},
+            "placeId":"ChIJeaOR7zkA9x4R79dUfHSc0U8"
+          },
+
+          {
+            "title":"ABC Recovery",
+            "address1":"5 Fairlen Way (Lenham Unit 13), Phoenix",
+            "address2":"Durban, South Africa",
+            "day": "Monday",
+            "startTime": "18:30",
+            "endTime": "20:00",
+            "url": "./group-logos/abc-logo.png",
+            "email": "solomongopaul@gmail.com",
+            "coords":{"lat":-29.69613158690079,"lng":30.995287268345173},
+            "placeId":"ChIJ-TxQvKME9x4Rex5C9lr4Iac"
+          },
         ],
-        "mapOptions": {"center":{"lat":38.0,"lng":-100.0},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":4,"zoomControl":true,"maxZoom":17,"mapId":""},
+
+         
+        "mapOptions": {
+          "center": {"lat":38.0,"lng":-100.0},
+          "fullscreenControl":true,
+          "mapTypeControl":false,
+          "streetViewControl":false,
+          "zoom":4,
+          "zoomControl":true,
+          "maxZoom":17,
+          "mapId":""},
+
         "mapsApiKey": "AIzaSyBULz8OaS5-O6b8R8HjCtZkePq0z9UAMHk",
-        "capabilities": {"input":true,"autocomplete":true,"directions":true,"distanceMatrix":true,"details":true,"actions":false}
+        "capabilities": {
+          "input":true,
+          "autocomplete":true,
+          "directions":true,
+          "distanceMatrix":true,
+          "details":true,
+          "actions":false}
       };
 
       function initMap() {
         new LocatorPlus(CONFIGURATION);
-      }
+      };
     </script>
+
     <script id="locator-result-items-tmpl" type="text/x-handlebars-template">
       {{#each locations}}
         <li class="location-result" data-location-index="{{index}}">
@@ -862,7 +970,7 @@
           <div class="options">
             <div class="option-container">
               <button class="details-button option">
-                <span>View details</span>
+                <span>MORE INFO</span>
               </button>
             </div>
           </div>
@@ -887,12 +995,10 @@
       </button>
       <header>
         <div class="banner">
-          <svg width="23" height="32" viewBox="0 0 23 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.9976 11.5003C22.9976 13.2137 22.7083 14.9123 21.8025 16.7056C18.6321 22.9832 12.7449 24.3314 12.2758 30.7085C12.2448 31.1294 11.9286 31.4744 11.4973 31.4744C11.0689 31.4744 10.7527 31.1294 10.7218 30.7085C10.2527 24.3314 4.3655 22.9832 1.19504 16.7056C0.289306 14.9123 0 13.2137 0 11.5003C0 5.13275 5.14557 0 11.5003 0C17.852 0 22.9976 5.13275 22.9976 11.5003Z" fill="#4285F4"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" transform="translate(5.5,5.5)" d="M6 8.84091L9.708 11L8.724 6.92961L12 4.19158L7.6856 3.83881L6 0L4.3144 3.83881L0 4.19158L3.276 6.92961L2.292 11L6 8.84091Z" fill="#FBE15C"/>
-          </svg>
+          <img src="{{location.url}}" alt="" class="banner-img">
         </div>
         <h2>{{location.title}}</h2>
+        <hr>
       </header>
       {{#if location.travelDistanceText}}
         <div class="distance">{{location.travelDistanceText}} away</div>
@@ -901,6 +1007,16 @@
         {{location.address1}}<br>
         {{location.address2}}
       </div>
+      <div class="address"><span class="start-time-bold">Day:</span><br>{{location.day}}</div>
+      <div class="address">
+        <span class="start-time-bold">Start Time:</span><br> {{location.startTime}}
+      </div>
+      <div class="address"><span class="start-time-bold">End Time:</span><br> {{location.endTime}}</div>
+      
+    <div class="email">
+      <a href="mailto: {{location.email}} " class="email-btn">Email</a>
+    </div>
+
       <div class="atmosphere">
         {{#if place.rating}}
           <span class="star-rating-numeric">{{place.rating}}</span>
@@ -976,10 +1092,11 @@
       <div id="locations-panel">
         <div id="locations-panel-list">
           <header>
-            <h1 class="search-title">
-              <img src="https://fonts.gstatic.com/s/i/googlematerialicons/place/v15/24px.svg"/>
-              Find a location near you
-            </h1>
+            <div class="title-container">
+              <img src="./pex-logo.jpg" class="search-logo">
+              <h1 class="search-title">Find a Recovery Group Near You</h1>
+            </div>
+          
             <div class="search-input">
               <input id="location-search-input" placeholder="Enter your address or zip code">
               <div id="search-overlay-search" class="search-input-overlay search">

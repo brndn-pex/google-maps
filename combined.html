@@ -428,11 +428,10 @@
         font-weight: 500;
         padding: 0.3em 0.81em;
       }
-
       
     </style>
     <script defer>
-        'use strict';
+      'use strict';
 
       /** Hide a DOM element. */
       function hideElement(el) {
@@ -508,9 +507,7 @@
         
         // Create a marker for each location.
         const markers = locator.locations.map(function(location, index) {
-          
-        
-          
+
           const marker = new google.maps.Marker({
             position: location.coords,
             map: locator.map,
@@ -640,6 +637,7 @@
         const searchInputEl = document.getElementById('location-search-input');
         const searchButtonEl = document.getElementById('location-search-button');
 
+        
         const updateSearchLocation = function(address, location) {
           if (locator.searchLocationMarker) {
             locator.searchLocationMarker.setMap(null);
@@ -907,13 +905,13 @@
       };
 
 
-window.initMap()
 
     </script>
     
     <!-- Config.js -->
 
-    <script defer>"use strict";
+    <script defer>
+    "use strict";
 
       const CONFIGURATION = {
         locations: [
@@ -1477,9 +1475,12 @@ window.initMap()
         
       function initMap() {
         new LocatorPlus(CONFIGURATION);
-      }
+      };
+      
     </script>
 
+
+  
   <script id="locator-result-items-tmpl" type="text/x-handlebars-template" defer>
     {{#each locations}}
       <li class="location-result" data-location-index="{{index}}">
@@ -1487,6 +1488,7 @@ window.initMap()
           <h2 class="name">{{title}}</h2>
         </button>
         <div class="address">{{address1}}<br>{{address2}}</div>
+        
         <div class="options">
           <div class="option-container">
             <button class="details-button option">
@@ -1494,9 +1496,7 @@ window.initMap()
             </button>
           </div>
         </div>
-        {{#if travelDistanceText}}
-          <div class="distance">{{travelDistanceText}}</div>
-        {{/if}}
+        <div class="distance">{{travelDistanceText}}</div>
         <a class="directions-button" href="" target="_blank" title="Get directions to this location on Google Maps">
           <svg width="34" height="34" viewBox="0 0 34 34"
                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1521,9 +1521,7 @@ window.initMap()
       <h2>{{location.title}}</h2>
     </header>
     <hr/>
-    {{#if location.travelDistanceText}}
-      <div class="distance">{{location.travelDistanceText}} away</div>
-    {{/if}}
+    <div class="distance">{{location.travelDistanceText}} away</div>
     <div class="address">
       <b>{{location.address1}}</b><br>
       {{location.address2}}
@@ -1639,6 +1637,7 @@ window.initMap()
     </div>
     <div id="gmp-map">  </div>
   </div>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBULz8OaS5-O6b8R8HjCtZkePq0z9UAMHk&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v6_cABCDE" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyBULz8OaS5-O6b8R8HjCtZkePq0z9UAMHk&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v6_cABCDE" async defer></script>
+  
   </body>
 </html>
