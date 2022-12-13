@@ -513,7 +513,8 @@
           }
           if (panToMarker && locationIdx != null) {
             locator.map.panTo(locator.locations[locationIdx].coords);
-            locator.map.setZoom(18)
+            locator.map.setZoom(18);
+            locator.map.setTilt(45);
           }
         };
 
@@ -1509,7 +1510,7 @@
             coords: { lat: -29.776603636355592, lng: 31.045664297183816 },
             placeId: "ChIJ8etkt0QG9x4RkeI61IHyJ1A",
           },
-        ], 
+        ],
         mapOptions: {
           center: { lat: 0, lng: 0 },
           gestureHandling: "cooperative",
