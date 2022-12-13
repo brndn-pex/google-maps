@@ -519,15 +519,13 @@
         // Create a marker for each location.
         const markers = locator.locations.map(function (location, index) {
           const mark = "./ProjectExodusCircle.svg";
-          const marker = new google.maps.marker.AdvancedMarkerView({
+          const marker = new google.maps.marker({
             position: location.coords,
             map: locator.map,
             title: location.title,
             icon: mark,
             optimized: true,
             scaledSize: new google.maps.Size(25, 25),
-            collisionBehavior:
-              google.maps.collisionBehavior.OPTIONAL_AND_HIDES_LOWER_PRIORITY,
           });
           marker.addListener("click", function () {
             selectResultItem(index, false, true);
@@ -680,18 +678,22 @@
             return;
           }
           locator.searchLocation = { address: address, location: location };
-          locator.searchLocationMarker = new google.maps.marker({
-            position: location,
-            map: locator.map,
-            title: "My location",
-            icon: {
-              path: google.maps.SymbolPath.CIRCLE,
-              scale: 12,
-              fillColor: "#3367D6",
-              fillOpacity: 0.5,
-              strokeOpacity: 0,
-            },
-          });
+          locator.searchLocationMarker =
+            new google.maps.marker.AdvancedMarkerView({
+              position: location,
+              map: locator.map,
+              title: "My location",
+              icon: {
+                path: google.maps.SymbolPath.CIRCLE,
+                scale: 12,
+                fillColor: "#3367D6",
+                fillOpacity: 0.5,
+                strokeOpacity: 0,
+                collisionBehavior:
+                  google.maps.collisionBehavior
+                    .OPTIONAL_AND_HIDES_LOWER_PRIORITY,
+              },
+            });
 
           // Update the locator's idea of the user's country, used for units. Use
           // `formatted_address` instead of the more structured `address_components`
