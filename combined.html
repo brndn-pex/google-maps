@@ -680,22 +680,18 @@
             return;
           }
           locator.searchLocation = { address: address, location: location };
-          locator.searchLocationMarker =
-            new google.maps.marker.AdvancedMarkerView({
-              position: location,
-              map: locator.map,
-              title: "My location",
-              icon: {
-                path: google.maps.SymbolPath.CIRCLE,
-                scale: 12,
-                fillColor: "#3367D6",
-                fillOpacity: 0.5,
-                strokeOpacity: 0,
-                collisionBehavior:
-                  google.maps.collisionBehavior
-                    .OPTIONAL_AND_HIDES_LOWER_PRIORITY,
-              },
-            });
+          locator.searchLocationMarker = new google.maps.marker({
+            position: location,
+            map: locator.map,
+            title: "My location",
+            icon: {
+              path: google.maps.SymbolPath.CIRCLE,
+              scale: 12,
+              fillColor: "#3367D6",
+              fillOpacity: 0.5,
+              strokeOpacity: 0,
+            },
+          });
 
           // Update the locator's idea of the user's country, used for units. Use
           // `formatted_address` instead of the more structured `address_components`
