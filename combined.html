@@ -531,9 +531,6 @@
           });
           marker.addListener("click", function () {
             selectResultItem(index, false, true);
-            locator.map.panTo(locator.locations[locationIdx].coords);
-            locator.map.setZoom(18);
-            locator.map.setTilt(45);
           });
           return marker;
         });
