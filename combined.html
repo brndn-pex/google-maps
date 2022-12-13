@@ -525,6 +525,7 @@
             title: location.title,
             icon: mark,
             optimized: true,
+            animation: google.maps.Animation.DROP,
             scaledSize: new google.maps.Size(25, 25),
           });
           marker.addListener("click", function () {
@@ -533,6 +534,21 @@
           return marker;
         });
 
+        function drop() {
+          for (var i = 0; i < location.length; i++) {
+            setTimeout(function () {
+              addMarkerMethod();
+            }, i * 200);
+          }
+        }
+
+        function toggleBounce() {
+          if (marker.getAnimation() !== null) {
+            marker.setAnimation(null);
+          } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+          }
+        }
 
         // Fit map to marker bounds.
         locator.updateBounds = function () {
@@ -978,10 +994,10 @@
             endTime: "20h30",
             day: "Monday",
             email: "jan@3Ci.co.za",
-            coords: { lat: -25.81410386110579, lng:28.351966297063264 },
+            coords: { lat: -25.81410386110579, lng: 28.351966297063264 },
             placeId: "ChIJc-zBAUxclR4RdIRLRymZgww",
           },
-           
+
           {
             title: "Home Ground, Westville",
             url: "../group-logos/homeground-logo.png",
