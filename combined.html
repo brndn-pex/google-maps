@@ -525,26 +525,16 @@
             title: location.title,
             icon: mark,
             optimized: true,
-            animation: google.maps.Animation.DROP,
             scaledSize: new google.maps.Size(25, 25),
             collisionBehavior:
               google.maps.collisionBehavior.OPTIONAL_AND_HIDES_LOWER_PRIORITY,
           });
           marker.addListener("click", function () {
             selectResultItem(index, false, true);
+            toggleBounce;
           });
           return marker;
         });
-
-
-
-        function drop() {
-          for (var i = 0; i < location.length; i++) {
-            setTimeout(function () {
-              addMarkerMethod();
-            }, i * 200);
-          }
-        }
 
         function toggleBounce() {
           if (marker.getAnimation() !== null) {
