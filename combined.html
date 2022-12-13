@@ -530,12 +530,10 @@
             scaledSize: new google.maps.Size(25, 25),
           });
           marker.addListener("click", function () {
-            selectResultItem(index, false, true);
+            selectResultItem(index, true, true);
           });
           return marker;
         });
-
-      
 
         function toggleBounce() {
           if (marker.getAnimation() !== null) {
@@ -681,22 +679,18 @@
             return;
           }
           locator.searchLocation = { address: address, location: location };
-          locator.searchLocationMarker =
-            new google.maps.marker.AdvancedMarkerView({
-              position: location,
-              map: locator.map,
-              title: "My location",
-              icon: {
-                path: google.maps.SymbolPath.CIRCLE,
-                scale: 12,
-                fillColor: "#3367D6",
-                fillOpacity: 0.5,
-                strokeOpacity: 0,
-                collisionBehavior:
-                  google.maps.collisionBehavior
-                    .OPTIONAL_AND_HIDES_LOWER_PRIORITY,
-              },
-            });
+          locator.searchLocationMarker = new google.maps.Marker({
+            position: location,
+            map: locator.map,
+            title: "My location",
+            icon: {
+              path: google.maps.SymbolPath.CIRCLE,
+              scale: 12,
+              fillColor: "#3367D6",
+              fillOpacity: 0.5,
+              strokeOpacity: 0,
+            },
+          });
 
           // Update the locator's idea of the user's country, used for units. Use
           // `formatted_address` instead of the more structured `address_components`
@@ -1768,7 +1762,7 @@
       <div id="gmp-map"></div>
     </div>
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBULz8OaS5-O6b8R8HjCtZkePq0z9UAMHk&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v6_cABCDE"
+      src="https://maps.googleapis.com/maps/api/js?v=beta&key=AIzaSyBULz8OaS5-O6b8R8HjCtZkePq0z9UAMHk&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v6_cABCDE"
       async
       defer
     ></script>
