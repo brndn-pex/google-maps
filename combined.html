@@ -75,7 +75,7 @@
         bottom: 0;
         overflow-y: scroll;
         background: white;
-        padding: 0.5em;
+        padding: 0 0.5em;
         box-sizing: border-box;
       }
 
@@ -93,7 +93,7 @@
       }
 
       #locations-panel-list > header {
-        padding: 1.4em 1.4em 0 1.4em;
+        padding: 0 1.4em 0 1.4em;
       }
 
       #locations-panel-list h1.search-title {
@@ -117,6 +117,10 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+      }
+
+      .search-branding {
+        font-size: 2em;
       }
       #locations-panel-list .search-input {
         width: 100%;
@@ -432,6 +436,15 @@
         font-size: 0.9em;
         font-weight: 500;
         padding: 0.3em 0.81em;
+      }
+
+      .area {
+        margin-bottom: -1.1em;
+      }
+
+      .road {
+        margin-bottom: 0.4em;
+        margin-top: 0;
       }
     </style>
     <script defer>
@@ -980,7 +993,7 @@
       const CONFIGURATION = {
         locations: [
           {
-            title: "3Ci & Shamur Consulting",
+            title: "3Ci & Shamar Consulting",
             url: "./group-logos/3ci-logo.png",
             address1: "56 Saal Street",
             address2: "Zwavelpoort, Pretoria, South Africa",
@@ -1089,7 +1102,7 @@
             title: "Elim Recovery",
             url: "./group-logos/elim-logo.png",
             address1: "300 Nutfield Road, Brookeborough",
-            address2: "County Fernanagh, Enniskillen,Northern Ireland",
+            address2: "County Fernanagh, Enniskillen, Northern Ireland",
             startTime: "18h30",
             endTime: "20h30",
             day: "Monday",
@@ -1324,7 +1337,7 @@
           {
             title: "Urban Recovery, Centurion",
             url: "./group-logos/urban-logo.png",
-            address1: "Hillsong Centurion Plum Court ,877 Freight Road",
+            address1: "Hillsong Centurion Plum Court, 877 Freight Road",
             address2: "Louwlardia, Centurion, South Africa",
             startTime: "19h00",
             endTime: "21h00",
@@ -1608,8 +1621,8 @@
       {{#if location.travelDistanceText}}
         <div class="distance">{{location.travelDistanceText}} away</div>
       {{/if}}
-      <div class="address">
-        <b>{{location.address1}}</b><br />
+      <div class="address area">
+        <p class="road">{{location.address1}}</p>
         {{location.address2}}
       </div>
       <br />
@@ -1727,9 +1740,9 @@
             <div id="search-branding-container">
               <img
                 class="search-logo"
-                src="https://ucarecdn.com/e53472ef-dc06-41c5-aedc-154710328ac9/PExLogo1.png"
+                src="./pex-logo-black.webp"
               />
-              <h1 class="search-branding">Find a Recovery Group Near You</h1>
+              <h1 class="search-branding">Find a recovery group near you</h1>
             </div>
             <div class="search-input">
               <input
